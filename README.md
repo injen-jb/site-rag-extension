@@ -22,7 +22,7 @@ The experiment is not primarily about which agent wins.
 
 It's about something more interesting:
 
-**whether a sufficiently precise specification, compiled from human-AI dialogue, can substitute for the human being present during execution.**
+**Whether a sufficiently precise specification, compiled from human-AI dialogue, can substitute for the human being present during execution.**
 
 > The spec as a lossless interface between intent and implementation.
 
@@ -165,11 +165,29 @@ The meaningful differences emerged exactly where the spec was silent, ambiguous,
 
 This is the most intellectually interesting finding.
 
-**Claude Code** optimized for **spec fidelity and architectural completeness**. Both modes work end-to-end. The worker architecture is correctly threaded. The AsyncGenerator crawler — not explicitly in the spec but aligned with its intent — is the single best design decision in any of the three codebases. Claude read *between the lines*. The weakness: some declared features were incomplete, and streaming was simulated.
+**Claude Code** optimized for **spec fidelity and architectural completeness**.
 
-**Codex** optimized for **reliability and developer experience**. Fallback providers mean the extension always loads, even without a GPU. A scaffold test that verifies the project *structure* in CI is a novel, defensive idea not in the spec. Coverage metrics are explicit and visible. The weakness: it dropped Svelte entirely — the clearest spec deviation — apparently encountering build friction and making a cold trade-off: something that runs over something that matches. The MVC controller pattern it substituted is actually more testable than raw Svelte state, which is a form of principled disobedience.
+Both modes work end-to-end. The worker architecture is correctly threaded.
 
-**Gemini** optimized for **correctness of specific components**. Real SSE streaming is the most technically correct implementation of that feature across all three. `fake-indexeddb` enabling real database tests is the smartest testing decision in the experiment. The weakness: Mode 2 — the product's primary differentiator — was fully implemented as isolated components but never wired to the user-facing message path. The `MessageRouter` returns `"Site mode not implemented yet"`. Component quality without integration verification.
+The AsyncGenerator crawler — not explicitly in the spec but aligned with its intent — is the single best design decision in any of the three codebases.
+
+Claude read *between the lines*. The weakness: some declared features were incomplete, and streaming was simulated.
+
+**Codex** optimized for **reliability and developer experience**.
+
+Fallback providers mean the extension always loads, even without a GPU. A scaffold test that verifies the project *structure* in CI is a novel, defensive idea not in the spec.
+
+Coverage metrics are explicit and visible. The weakness: it dropped Svelte entirely — the clearest spec deviation — apparently encountering build friction and making a cold trade-off: something that runs over something that matches.
+
+The MVC controller pattern it substituted is actually more testable than raw Svelte state, which is a form of principled disobedience.
+
+**Gemini** optimized for **correctness of specific components**.
+
+Real SSE streaming is the most technically correct implementation of that feature across all three. `fake-indexeddb` enabling real database tests is the smartest testing decision in the experiment.
+
+The weakness: Mode 2 — the product's primary differentiator — was fully implemented as isolated components but never wired to the user-facing message path. The `MessageRouter` returns `"Site mode not implemented yet"`.
+
+Component quality without integration verification.
 
 ---
 
@@ -181,7 +199,9 @@ This is the most intellectually interesting finding.
 | Claude | Declares more than it finishes | Over-reach under complexity |
 | Gemini | Components without integration | Bottom-up without top-down verification |
 
-None of these are bugs. They are **systematic tendencies** — each agent has a characteristic way of failing when pushed to its limits. Knowing this is actionable: future spec iterations could add explicit guards against each one.
+None of these are bugs, they are **systematic tendencies** -> each agent has a characteristic way of failing when pushed to its limits.
+
+**Knowing this is actionable: future spec iterations could add explicit guards against each one.**
 
 ---
 
@@ -237,7 +257,9 @@ The more interesting question is: **what does it mean that three distinct system
 
 It means the specification carried enough semantic weight to substitute for the human who designed it. The reasoning, the trade-offs, the "why" of each decision — none of that was present in `SPECIFICATIONS.md`. Only the decisions. And yet the agents reproduced not just the structure but the *spirit* of the architecture: pure core, swappable providers, interfaces before implementations, tests before code.
 
-That is the value of the Socratic process. Not the Chrome extension. The extension is a vehicle. The real product is the **methodology for compiling human intent into machine-executable specifications** — and the evidence that, when done carefully, it works.
+That is the value of the Socratic process, not the Chrome extension. The extension is a vehicle.
+
+The real product is the **methodology for compiling human intent into machine-executable specifications**, and the evidence that, when done carefully, it works.
 
 ### The Process, Visualized
 
@@ -279,23 +301,29 @@ Spec improvement
 Next iteration ↑
 ```
 
-Each loop tightens the spec. Each spec produces better implementations. Each comparison reveals new gaps. The process compounds.
+Each loop tightens the spec. Each spec produces better implementations.
+
+Each comparison reveals new gaps -> The process compounds.
 
 ---
 
-## Closing Note — What Comes Next
+## Closing Note - What Comes Next
 
 The challenge is not complete.
 
-The three implementations exist as separate codebases, each with genuine strengths and genuine gaps. The final step — which may also be the most demanding — is to hand all three to a single agent and issue the following challenge:
+The three implementations exist as separate codebases, each with genuine strengths and genuine gaps. The final step, **which may also be the most demanding**, is to hand all three to a single agent and issue the following challenge:
 
-> *You have three implementations of the same specification. Study them. Identify the best decision in each. Produce a single unified codebase that is strictly better than all three — not a merge of files, but a synthesis of ideas.*
+> *You have three implementations of the same specification. Study them. Identify the best decision in each. Produce a single unified codebase that is strictly better than all three: not a merge of files, but a synthesis of ideas.*
 
-This is harder than building from a spec. It requires the agent to act as an architect reviewing existing work, extracting patterns, reconciling conflicts, and making principled choices about what to keep, what to discard, and what to redesign entirely.
+**This is much harder than building from a spec.**
+
+It requires the agent to act as an architect reviewing existing work, extracting patterns, reconciling conflicts, and making principled choices about what to keep, what to discard, and what to redesign entirely.
 
 The agent chosen for this final step has not been disclosed. The selection is deliberate, based on the evidence gathered here.
 
 The outcome will complete this document.
+
+Stay tuned.
 
 ---
 
