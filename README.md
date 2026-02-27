@@ -112,7 +112,7 @@ A human revisiting the choices needs the reasoning, not the implementation detai
 | | Claude Code CLI | Codex CLI | Gemini CLI |
 |---|---|---|---|
 | **Spec file** | `SPECIFICATIONS.md` | `SPECIFICATIONS.md` | `SPECIFICATIONS.md` |
-| **Model** | Opus Opus 4.6 - ultrathink | gpt-5.3 Codex - medium | Gemini 3.1 pro preview |
+| **Model** | Opus 4.6 - ultrathink | gpt-5.3 Codex - High | Gemini 3.1 Pro Preview |
 | **Mode** | autonomous `--dangerously-skip-permissions` | autonomous | autonomous |
 | **Duration** | 35 minutes | 45 minutes | ~ 1 hour |
 
@@ -132,7 +132,9 @@ The first and most striking finding: **structural convergence was near-total**.
 
 All three independently produced the same folder layout, the same TypeScript strict config, the same AI stack (`@huggingface/transformers`, `Xenova/all-MiniLM-L6-v2`, `LiquidAI/LFM2-1.2B`), the same provider contract test pattern, the same cosine similarity approach for vector search.
 
-The spec imposed a strong enough template that three different systems, with different architectures and training data, arrived at essentially the same skeleton. **The specification worked.**
+The spec imposed a strong enough template that three different systems, with different architectures and training data, arrived at essentially the same skeleton. 
+
+**The specification worked.**
 
 ```
                          Claude      Codex       Gemini
@@ -169,15 +171,19 @@ This is the most intellectually interesting finding.
 
 Both modes work end-to-end. The worker architecture is correctly threaded.
 
-The AsyncGenerator crawler — not explicitly in the spec but aligned with its intent — is the single best design decision in any of the three codebases.
+The AsyncGenerator crawler, not explicitly in the spec but aligned with its intent, is the single best design decision in any of the three codebases.
 
 Claude read *between the lines*. The weakness: some declared features were incomplete, and streaming was simulated.
 
 **Codex** optimized for **reliability and developer experience**.
 
-Fallback providers mean the extension always loads, even without a GPU. A scaffold test that verifies the project *structure* in CI is a novel, defensive idea not in the spec.
+Fallback providers mean the extension always loads, even without a GPU.
 
-Coverage metrics are explicit and visible. The weakness: it dropped Svelte entirely — the clearest spec deviation — apparently encountering build friction and making a cold trade-off: something that runs over something that matches.
+A scaffold test that verifies the project *structure* in CI is a novel, defensive idea not in the spec.
+
+Coverage metrics are explicit and visible.
+
+The weakness: it dropped Svelte entirely (the clearest spec deviation) apparently encountering build friction and making a cold trade-off: something that runs over something that matches.
 
 The MVC controller pattern it substituted is actually more testable than raw Svelte state, which is a form of principled disobedience.
 
@@ -185,7 +191,7 @@ The MVC controller pattern it substituted is actually more testable than raw Sve
 
 Real SSE streaming is the most technically correct implementation of that feature across all three. `fake-indexeddb` enabling real database tests is the smartest testing decision in the experiment.
 
-The weakness: Mode 2 — the product's primary differentiator — was fully implemented as isolated components but never wired to the user-facing message path. The `MessageRouter` returns `"Site mode not implemented yet"`.
+The weakness: Mode 2 (the product's primary differentiator) was fully implemented as isolated components but never wired to the user-facing message path. The `MessageRouter` returns `"Site mode not implemented yet"`.
 
 Component quality without integration verification.
 
@@ -239,9 +245,11 @@ measures time-to-first-token < time-to-completion.
 
 ### The Synthesis Verdict
 
-There is no single winner — and that is the correct outcome for this experiment.
+There is no single winner and that is the correct outcome for this experiment.
 
-Each agent produced something valuable. Each produced something incomplete. The report's own conclusion states it cleanly:
+Each agent produced something valuable, each produced something incomplete. 
+
+**The report's own conclusion states it cleanly:**
 
 > *Combining Gemini's real SSE streaming, Codex's fallback providers, and Claude's worker architecture and AsyncGenerator crawler would produce the strongest result.*
 
@@ -255,7 +263,9 @@ The temptation when reading these results is to rank and move on. That would mis
 
 The more interesting question is: **what does it mean that three distinct systems converged on the same architecture from a shared text file?**
 
-It means the specification carried enough semantic weight to substitute for the human who designed it. The reasoning, the trade-offs, the "why" of each decision — none of that was present in `SPECIFICATIONS.md`. Only the decisions. And yet the agents reproduced not just the structure but the *spirit* of the architecture: pure core, swappable providers, interfaces before implementations, tests before code.
+It means the specification carried enough semantic weight to substitute for the human who designed it. The reasoning, the trade-offs, the "why" of each decision — none of that was present in `SPECIFICATIONS.md`. Only the decisions.
+
+And yet the agents reproduced not just the structure but the *spirit* of the architecture: pure core, swappable providers, interfaces before implementations, tests before code.
 
 That is the value of the Socratic process, not the Chrome extension. The extension is a vehicle.
 
