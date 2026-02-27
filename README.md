@@ -10,13 +10,21 @@
 
 ## Premise
 
-What happens when you give three competing AI coding agents the **exact same specification** — produced through a rigorous, Socratic dialogue process — and let them build autonomously, overnight, from a cold start?
+What happens when you give three competing AI coding agents the **exact same specification** produced through a rigorous Socratic dialogue process, and let them loose to build autonomously, overnight, from a cold start?
 
-Not a toy task. Not a "write a sorting algorithm." A real, non-trivial product:
+Not a toy task,, not a "write a sorting algorithm."
 
-> A Chrome Extension (Manifest V3) that lets users **chat with any website** using **100% in-browser AI inference** — WebGPU, no API keys, no servers, offline after first model load.
+**A real, non-trivial product:**
 
-The experiment is not primarily about which agent wins. It's about something more interesting: **whether a sufficiently precise specification, compiled from human-AI dialogue, can substitute for the human being present during execution.** The spec as a lossless interface between intent and implementation.
+> A Chrome Extension (Manifest V3) that lets users **chat with any website** using **100% in-browser AI inference**, WebGPU, no API keys, no servers, offline after first model load.
+
+The experiment is not primarily about which agent wins.
+
+It's about something more interesting:
+
+**whether a sufficiently precise specification, compiled from human-AI dialogue, can substitute for the human being present during execution.**
+
+> The spec as a lossless interface between intent and implementation.
 
 ---
 

@@ -12,7 +12,16 @@
       "Bash(git init)",
       "Bash(git add .)",
       "Bash(git rm -r --cached . -q)",
-      "Bash(git rm -r --cached . -qf)"
+      "Bash(git rm -r --cached . -qf)",
+      "Bash(git commit:*)",
+      "Bash(gh auth status)",
+      "Bash(git remote add origin https://github.com/injen-jb/site-rag-extension.git)",
+      "Bash(git push -u origin master)",
+      "Bash(git branch -m master main)",
+      "Bash(git push origin main)",
+      "Bash(git push origin --delete master)",
+      "Bash(git branch -u origin/main main)",
+      "Bash(git push origin main --force)"
     ]
   }
 }
