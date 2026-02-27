@@ -44,15 +44,15 @@ Running inference via WebGPU directly in the browser, with no server, is suddenl
 
 The product vision crystallized into two modes:
 
-**Mode 1 — Page Q&A:**
+**Mode 1 -> Page Q&A:**
 
 Capture the current page's DOM, convert to Markdown, pass with the user's question to the in-browser LLM. Instant, stateless, ephemeral.
 
-**Mode 2 — Site RAG:**
+**Mode 2 -> Site RAG:**
 
 Detect `sitemap.xml`, BFS-crawl up to *k* pages at depth *d*, chunk and embed all content locally, store in IndexedDB, enable a persistent RAG conversation over the entire site — offline after the first crawl.
 
-The **USP**
+The **USP:**
 
 Fully self-contained, private by default, offline-capable, zero setup — had never been assembled in this combination.
 
@@ -62,7 +62,7 @@ Fully self-contained, private by default, offline-capable, zero setup — had ne
 
 *Full reconstruction available in [`SOCRATIC_SPECIFICATION_PROCESS.md`](./SOCRATIC_SPECIFICATION_PROCESS.md).*
 
-The specification was**extracted through dialogue** i.e. a conversational Claude instance acting as a Socratic interlocutor, not an instructor.
+The specification was **extracted through dialogue** i.e. a conversational Claude instance acting as a Socratic interlocutor, not an instructor.
 
 The process followed a deliberate sequence:
 
