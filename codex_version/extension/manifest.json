@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Converse With This Site",
+  "version": "0.1.0",
+  "description": "Chat with the current page or full site using in-browser AI.",
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["<all_urls>"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  },
+  "background": {
+    "service_worker": "extension/src/background/background.ts",
+    "type": "module"
+  },
+  "action": {
+    "default_popup": "extension/src/popup/popup.html"
+  },
+  "options_page": "extension/src/options/options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["extension/src/content/content.ts"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["dist/workers/*.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

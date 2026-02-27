@@ -1,0 +1,1010 @@
+<!DOCTYPE html><html><head>
+      <title>SPECIFICATIONS</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\julie\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+html body[for="html-export"] .markdown-preview h1 {
+  color: red !important;
+}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Plain CSS selectors to ensure HTML export picks up the theme */
+html body[for="html-export"] {
+  background: #0f1419 !important;
+  color: #d6deeb !important;
+}
+/* Cancel the built-in left: 50% / translateX(-50%) centering so margin: auto works */
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: auto !important;
+  transform: none !important;
+}
+html body[for="html-export"] .markdown-preview {
+  background: #0f1419 !important;
+  color: #d6deeb !important;
+  font-family: "Segoe UI", "Inter", sans-serif !important;
+  line-height: 1.7 !important;
+  max-width: 920px !important;
+  margin: 0 auto !important;
+  padding: 2.5rem 2rem !important;
+}
+html body[for="html-export"] .markdown-preview hr {
+  background-color: transparent !important;
+  display: block;
+  margin-top: 50px !important;
+  border: none !important;
+}
+strong {
+  color: #06b6d4 !important;
+}
+html body[for="html-export"] .markdown-preview h1,
+html body[for="html-export"] .markdown-preview h2,
+html body[for="html-export"] .markdown-preview h3,
+html body[for="html-export"] .markdown-preview h4,
+html body[for="html-export"] .markdown-preview h5,
+html body[for="html-export"] .markdown-preview h6 {
+  color: #06b6d4 !important;
+  letter-spacing: 0.01em;
+  border: none !important;
+}
+html body[for="html-export"] .markdown-preview h1 {
+  border-bottom: 2px solid #06b6d4;
+  padding-bottom: 0.45rem;
+}
+html body[for="html-export"] .markdown-preview h2,
+html body[for="html-export"] .markdown-preview h3 {
+  border-bottom: 1px solid #1f2a33;
+  padding-bottom: 0.35rem;
+}
+html body[for="html-export"] .markdown-preview p,
+html body[for="html-export"] .markdown-preview li {
+  color: #d6deeb !important;
+}
+html body[for="html-export"] .markdown-preview a {
+  color: #06b6d4 !important;
+  text-decoration: none;
+}
+html body[for="html-export"] .markdown-preview a:hover {
+  text-decoration: underline;
+}
+html body[for="html-export"] .markdown-preview hr {
+  border: 0;
+  border-top: 1px solid #1f2a33;
+}
+html body[for="html-export"] .markdown-preview blockquote {
+  background: #121a21;
+  border-left: 4px solid #06b6d4;
+  color: #b8c6d8 !important;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+}
+html body[for="html-export"] .markdown-preview code {
+  background: #17212b !important;
+  color: #7dd3fc !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+html body[for="html-export"] .markdown-preview pre,
+html body[for="html-export"] .markdown-preview .highlight pre {
+  background: #121a21 !important;
+  border: 1px solid #1f2a33 !important;
+  border-radius: 8px;
+}
+html body[for="html-export"] .markdown-preview pre code {
+  color: #d6deeb !important;
+  background: transparent !important;
+  padding: 0;
+}
+html body[for="html-export"] .markdown-preview table {
+  border-collapse: collapse;
+  width: 100%;
+}
+html body[for="html-export"] .markdown-preview th,
+html body[for="html-export"] .markdown-preview td {
+  border: 1px solid #1f2a33 !important;
+  padding: 0.5rem 0.7rem;
+}
+html body[for="html-export"] .markdown-preview th {
+  background: #121a21;
+  color: #06b6d4 !important;
+}
+html body[for="html-export"] .markdown-preview img {
+  display: block;
+  margin: 1.25rem auto;
+  max-width: 100%;
+  border: 1px solid #1f2a33;
+  border-radius: 10px;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><!-- Open Graph (Facebook, LinkedIn, Discord, Slack, etc.) --><meta property="og:title" content="We're Gonna Need a Bigger Boat">
+<meta property="og:description" content="Rethinking Version Control, IDEs, and Workflows for the AI Development Era.">
+<meta property="og:image" content="https://codelake.ai/manifesto/bigger_boat.jpg">
+<meta property="og:url" content="https://codelake.ai/manifesto/were_gonna_need_a_bigger_boat.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="codelake.ai">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="We're Gonna Need a Bigger Boat">
+<meta name="twitter:description" content="Rethinking Version Control, IDEs, and Workflows for the AI Development Era">
+<meta name="twitter:image" content="https://codelake.ai/manifesto/bigger_boat.jpg">
+<meta name="twitter:site" content="https://codelake.ai/manifesto/were_gonna_need_a_bigger_boat.html">
+<meta name="twitter:creator" content="Julien Borrel - codelake.ai">
+
+<!-- General -->
+<meta name="description" content="Rethinking Version Control, IDEs, and Workflows for the AI Development Era">
+<meta name="author" content="Julien Borrel - codelake.ai">
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MKG6PXETCF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-MKG6PXETCF');
+</script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="converse-with-this-site---a-chrome-extension">Converse With This Site - A Chrome Extension </h1>
+<h2 id="project-specs--architecture-for-coding-agents">Project Specs &amp; Architecture for Coding Agents </h2>
+<hr>
+<h2 id="-project-goal">🎯 Project Goal </h2>
+<p>Build a Chrome extension (Manifest V3) that lets users <strong>chat with any website</strong> — either the current page or the entire site — using <strong>100% in-browser AI inference</strong>. No API keys, no servers, no external dependencies after first model load.</p>
+<hr>
+<h2 id="-core-innovation">🧠 Core Innovation </h2>
+<p>Everything runs locally in the browser:</p>
+<ul>
+<li><strong>LFM2 by Liquid AI</strong> (1.2B, q4 quantized) via <code>@huggingface/transformers</code> + WebGPU for LLM inference</li>
+<li><strong>MiniLM or similar</strong> small embedding model via <code>@huggingface/transformers</code> + WebGPU for RAG embeddings</li>
+<li><strong>IndexedDB</strong> for persisting embeddings between sessions</li>
+<li><strong>Zero calls</strong> to Anthropic, OpenAI, or any external LLM API</li>
+</ul>
+<p>This has never been done cleanly in a Chrome extension before. The USP is the fully self-contained, offline-capable, private-by-default experience.</p>
+<hr>
+<h2 id="️-project-structure">🗂️ Project Structure </h2>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>extension/
+├── manifest.json
+├── src/
+│   │
+│   ├── core/                          # 🔒 Pure interfaces &amp; business logic. Never import from providers/.
+│   │   ├── interfaces/
+│   │   │   ├── LLMProvider.ts         # interface LLMProvider, StreamHandler, GenerateOptions
+│   │   │   ├── EmbeddingProvider.ts   # interface EmbeddingProvider, EmbeddingResult
+│   │   │   ├── VectorStore.ts         # interface VectorStore, SearchResult, ChunkRecord
+│   │   │   └── Crawler.ts             # interface Crawler, CrawlOptions, CrawlResult
+│   │   ├── errors/
+│   │   │   └── index.ts               # ModelLoadError, CrawlError, EmbeddingError, ProviderError
+│   │   ├── rag/
+│   │   │   ├── RAGPipeline.ts         # class RAGPipeline — injected EmbeddingProvider + VectorStore
+│   │   │   ├── Chunker.ts             # class Chunker — token-aware splitting, overlap
+│   │   │   └── PromptBuilder.ts       # class PromptBuilder — formats context + question for any LLM
+│   │   └── extraction/
+│   │       ├── DOMExtractor.ts        # class DOMExtractor — strips noise, extracts main content
+│   │       └── HTMLToMarkdown.ts      # class HTMLToMarkdown — Turndown wrapper, configurable rules
+│   │
+│   ├── providers/                     # 🔌 Swappable implementations of core interfaces
+│   │   ├── llm/
+│   │   │   ├── LFM2WebGPUProvider.ts  # class LFM2WebGPUProvider implements LLMProvider
+│   │   │   ├── ClaudeSDKProvider.ts   # class ClaudeSDKProvider implements LLMProvider
+│   │   │   └── index.ts               # createLLMProvider(config) factory — selects implementation
+│   │   ├── embedding/
+│   │   │   ├── TransformersEmbeddingProvider.ts  # class ... implements EmbeddingProvider (WebGPU)
+│   │   │   ├── OpenAIEmbeddingProvider.ts         # class ... implements EmbeddingProvider (API)
+│   │   │   └── index.ts               # createEmbeddingProvider(config) factory
+│   │   ├── vectorstore/
+│   │   │   ├── InMemoryVectorStore.ts # class ... implements VectorStore (ephemeral)
+│   │   │   ├── IndexedDBVectorStore.ts# class ... implements VectorStore (persistent)
+│   │   │   └── index.ts               # createVectorStore(config) factory
+│   │   └── crawler/
+│   │       ├── SitemapCrawler.ts      # class SitemapCrawler implements Crawler
+│   │       └── index.ts               # createCrawler(config) factory
+│   │
+│   ├── background/
+│   │   ├── background.ts              # Service worker entry: wires providers, registers ports
+│   │   └── MessageRouter.ts           # class MessageRouter — typed message bus (popup ↔ workers)
+│   │
+│   ├── content/
+│   │   └── content.ts                 # Injected script: uses DOMExtractor, sends markdown to bg
+│   │
+│   ├── popup/
+│   │   ├── popup.html
+│   │   └── popup.svelte               # Chat UI: mode toggle, streaming, citations
+│   │
+│   ├── options/
+│   │   ├── options.html
+│   │   └── options.svelte             # Provider config, model selection, cache management
+│   │
+│   ├── workers/
+│   │   ├── llm.worker.ts              # Thin worker shell: instantiates LFM2WebGPUProvider
+│   │   ├── embedder.worker.ts         # Thin worker shell: instantiates TransformersEmbeddingProvider
+│   │   └── crawler.worker.ts          # Thin worker shell: instantiates SitemapCrawler
+│   │
+│   └── config/
+│       └── providers.config.ts        # ← THE ONE FILE TO EDIT when swapping providers
+│
+├── vite.config.ts
+├── package.json
+└── tsconfig.json
+</code></pre><hr>
+<h2 id="-mode-1--current-page-qa">🔄 Mode 1 — Current Page Q&amp;A </h2>
+<p><strong>Flow:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User question in popup
+  → content.ts: capture document.body (prefer &lt;main&gt;, &lt;article&gt;)
+  → html2md.ts: strip nav/ads/scripts → clean Markdown
+  → background.ts: build prompt (markdown + question)
+  → llm.worker.ts: LFM2 inference via WebGPU → stream tokens
+  → popup.tsx: render streamed response
+</code></pre><p><strong>Key details:</strong></p>
+<ul>
+<li>Content script grabs DOM snapshot, strips <code>nav</code>, <code>footer</code>, <code>header</code>, <code>script</code>, <code>style</code>, <code>aside</code></li>
+<li>Use <code>Turndown</code> + <code>turndown-plugin-gfm</code> for HTML → Markdown conversion</li>
+<li>Pass markdown + user question directly into LFM2 context window (fits for most pages)</li>
+<li>For very long pages, fall back to a quick embed + retrieve before passing to LFM2</li>
+</ul>
+<hr>
+<h2 id="️-mode-2--full-site-rag">🕸️ Mode 2 — Full Site RAG </h2>
+<p><strong>Flow:</strong></p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>User switches to "Site" mode
+  → background.ts: check for /sitemap.xml (or /sitemap_index.xml)
+  → crawler.worker.ts:
+      parse sitemap → extract URLs
+      BFS crawl: max k=50 pages, depth d=3
+      each page: fetch HTML → html2md.ts → Markdown
+  → embedder.worker.ts:
+      chunk each markdown (512 tokens, 64 overlap)
+      embed each chunk → float32[] vector
+      store: { chunk, embedding, url, title, timestamp }
+  → vectorStore.ts: persist to IndexedDB keyed by domain
+  
+User asks a question:
+  → embed question → cosine similarity search → top-5 chunks
+  → rag.ts: build prompt with context + question + source URLs
+  → llm.worker.ts: LFM2 inference → stream answer with citations
+</code></pre><p><strong>Crawl parameters (user-configurable in options):</strong></p>
+<ul>
+<li><code>k</code> = max pages (default: 50)</li>
+<li><code>d</code> = max depth (default: 3)</li>
+<li>Respect <code>&lt;changefreq&gt;</code> and <code>&lt;lastmod&gt;</code> in sitemap for smart re-crawling</li>
+<li>Cache embeddings in IndexedDB, re-use on revisit (check if sitemap lastmod changed)</li>
+</ul>
+<hr>
+<h2 id="-ai-stack">🤖 AI Stack </h2>
+<h3 id="llm--liquid-ai-lfm2">LLM — Liquid AI LFM2 </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> pipeline <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@huggingface/transformers'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-const">const</span> llm <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">pipeline</span><span class="token punctuation">(</span><span class="token string">'text-generation'</span><span class="token punctuation">,</span> <span class="token string">'LiquidAI/LFM2-1.2B'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  device<span class="token operator">:</span> <span class="token string">'webgpu'</span><span class="token punctuation">,</span>
+  dtype<span class="token operator">:</span> <span class="token string">'q4'</span><span class="token punctuation">,</span>  <span class="token comment">// ~600MB download, cached after first use</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Streaming</span>
+<span class="token keyword keyword-const">const</span> stream <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">llm</span><span class="token punctuation">(</span>messages<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  max_new_tokens<span class="token operator">:</span> <span class="token number">512</span><span class="token punctuation">,</span>
+  do_sample<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+  temperature<span class="token operator">:</span> <span class="token number">0.3</span><span class="token punctuation">,</span>
+  streamer<span class="token operator">:</span> tokenCallback<span class="token punctuation">,</span>  <span class="token comment">// stream tokens to popup via port</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p><strong>Why LFM2:</strong></p>
+<ul>
+<li>Specifically designed for on-device / edge deployment</li>
+<li>2x faster than Qwen3 at same size</li>
+<li>Official ONNX exports available: <code>LiquidAI/LFM2.5-1.2B-Thinking-ONNX</code></li>
+<li>Already supported in <code>transformers.js</code></li>
+<li>Has a <strong>reasoning variant</strong> (Thinking) for better RAG answers</li>
+<li>VLM variant available if screenshot/image analysis ever needed: <code>LFM2.5-VL-1.6B</code></li>
+</ul>
+<p><strong>Alternative if LFM2 not yet available as transformers.js pipeline:</strong></p>
+<ul>
+<li>Fall back to direct ONNX Runtime Web: <code>LiquidAI/LFM2.5-1.2B-Thinking-ONNX</code> (q4 recommended)</li>
+<li>Or use <code>Qwen2.5-0.5B-Instruct</code> as a fallback (already confirmed working in transformers.js + WebGPU)</li>
+</ul>
+<h3 id="embeddings">Embeddings </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> embedder <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">pipeline</span><span class="token punctuation">(</span><span class="token string">'feature-extraction'</span><span class="token punctuation">,</span> <span class="token string">'Xenova/all-MiniLM-L6-v2'</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+  device<span class="token operator">:</span> <span class="token string">'webgpu'</span><span class="token punctuation">,</span>
+  dtype<span class="token operator">:</span> <span class="token string">'q8'</span><span class="token punctuation">,</span>  <span class="token comment">// ~23MB</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<hr>
+<h2 id="️-provider-abstraction-architecture">🏛️ Provider Abstraction Architecture </h2>
+<h3 id="the-golden-rule">The Golden Rule </h3>
+<blockquote>
+<p><code>src/core/</code> never imports from <code>src/providers/</code>. Dependencies always flow inward: providers depend on interfaces, never the reverse.</p>
+</blockquote>
+<h3 id="core-interfaces">Core Interfaces </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/core/interfaces/LLMProvider.ts</span>
+
+<span class="token doc-comment comment">/** Options controlling text generation behavior. */</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">GenerateOptions</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-readonly">readonly</span> maxNewTokens<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> temperature<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> doSample<span class="token operator">?</span><span class="token operator">:</span> <span class="token builtin">boolean</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token doc-comment comment">/** Callback invoked for each streamed token during generation. */</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-type">type</span> <span class="token class-name">StreamHandler</span> <span class="token operator">=</span> <span class="token punctuation">(</span>token<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/** Contract that every LLM backend must satisfy. */</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">LLMProvider</span> <span class="token punctuation">{</span>
+  <span class="token doc-comment comment">/** Human-readable provider name for logging and UI display. */</span>
+  <span class="token keyword keyword-readonly">readonly</span> name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+
+  <span class="token doc-comment comment">/** Load model into memory. Must be called before generate(). */</span>
+  <span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+
+  <span class="token doc-comment comment">/** Returns true if this provider can run in the current environment. */</span>
+  <span class="token function">isAvailable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+
+  <span class="token doc-comment comment">/** Generate a full response (non-streaming). */</span>
+  <span class="token function">generate</span><span class="token punctuation">(</span>prompt<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> GenerateOptions<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+
+  <span class="token doc-comment comment">/** Stream tokens to handler as they are produced. */</span>
+  <span class="token function">stream</span><span class="token punctuation">(</span>prompt<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> handler<span class="token operator">:</span> StreamHandler<span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> GenerateOptions<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+
+  <span class="token doc-comment comment">/** Release GPU/memory resources. */</span>
+  <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/core/interfaces/EmbeddingProvider.ts</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">EmbeddingResult</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-readonly">readonly</span> vector<span class="token operator">:</span> Float32Array<span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> dimensions<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">EmbeddingProvider</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-readonly">readonly</span> name<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> dimensions<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+  <span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">isAvailable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">embed</span><span class="token punctuation">(</span>text<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>EmbeddingResult<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">embedBatch</span><span class="token punctuation">(</span>texts<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>EmbeddingResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/core/interfaces/VectorStore.ts</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">ChunkRecord</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-readonly">readonly</span> id<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> text<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> embedding<span class="token operator">:</span> Float32Array<span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> url<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> title<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> crawledAt<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">SearchResult</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-readonly">readonly</span> chunk<span class="token operator">:</span> ChunkRecord<span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> score<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">VectorStore</span> <span class="token punctuation">{</span>
+  <span class="token function">upsert</span><span class="token punctuation">(</span>record<span class="token operator">:</span> ChunkRecord<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">upsertBatch</span><span class="token punctuation">(</span>records<span class="token operator">:</span> ChunkRecord<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">search</span><span class="token punctuation">(</span>queryEmbedding<span class="token operator">:</span> Float32Array<span class="token punctuation">,</span> topK<span class="token operator">:</span> <span class="token builtin">number</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>SearchResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">deleteByDomain</span><span class="token punctuation">(</span>hostname<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">count</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">number</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">clear</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="swapping-providers--one-file">Swapping Providers — One File </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/config/providers.config.ts</span>
+<span class="token comment">// ← The ONLY file that changes when switching inference backends.</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> LFM2WebGPUProvider <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/providers/llm/LFM2WebGPUProvider'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> ClaudeSDKProvider <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/providers/llm/ClaudeSDKProvider'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> TransformersEmbeddingProvider <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/providers/embedding/TransformersEmbeddingProvider'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> IndexedDBVectorStore <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/providers/vectorstore/IndexedDBVectorStore'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> SitemapCrawler <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/providers/crawler/SitemapCrawler'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token keyword keyword-type">type</span> <span class="token punctuation">{</span> LLMProvider<span class="token punctuation">,</span> EmbeddingProvider<span class="token punctuation">,</span> VectorStore<span class="token punctuation">,</span> Crawler <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/core/interfaces'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-interface">interface</span> <span class="token class-name">ProviderConfig</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-readonly">readonly</span> llm<span class="token operator">:</span> LLMProvider<span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> embedding<span class="token operator">:</span> EmbeddingProvider<span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> vectorStore<span class="token operator">:</span> VectorStore<span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> crawler<span class="token operator">:</span> Crawler<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token doc-comment comment">/** Active provider configuration. Swap implementations here. */</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-const">const</span> providers<span class="token operator">:</span> ProviderConfig <span class="token operator">=</span> <span class="token punctuation">{</span>
+  llm<span class="token operator">:</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">LFM2WebGPUProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span> modelId<span class="token operator">:</span> <span class="token string">'LiquidAI/LFM2-1.2B'</span><span class="token punctuation">,</span> dtype<span class="token operator">:</span> <span class="token string">'q4'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  <span class="token comment">// llm: new ClaudeSDKProvider({ model: 'claude-sonnet-4-5', apiKey: '' }),  // ← one line swap</span>
+  embedding<span class="token operator">:</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TransformersEmbeddingProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span> modelId<span class="token operator">:</span> <span class="token string">'Xenova/all-MiniLM-L6-v2'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  vectorStore<span class="token operator">:</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">IndexedDBVectorStore</span><span class="token punctuation">(</span><span class="token punctuation">{</span> dbName<span class="token operator">:</span> <span class="token string">'converse-with-site'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+  crawler<span class="token operator">:</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">SitemapCrawler</span><span class="token punctuation">(</span><span class="token punctuation">{</span> maxPages<span class="token operator">:</span> <span class="token number">50</span><span class="token punctuation">,</span> maxDepth<span class="token operator">:</span> <span class="token number">3</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+</code></pre><h3 id="concrete-implementation-example">Concrete Implementation Example </h3>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/providers/llm/LFM2WebGPUProvider.ts</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token keyword keyword-type">type</span> <span class="token punctuation">{</span> LLMProvider<span class="token punctuation">,</span> GenerateOptions<span class="token punctuation">,</span> StreamHandler <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/core/interfaces/LLMProvider'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> ModelLoadError <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/core/errors'</span><span class="token punctuation">;</span>
+
+<span class="token keyword keyword-interface">interface</span> <span class="token class-name">LFM2Config</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-readonly">readonly</span> modelId<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-readonly">readonly</span> dtype<span class="token operator">:</span> <span class="token string">'fp32'</span> <span class="token operator">|</span> <span class="token string">'fp16'</span> <span class="token operator">|</span> <span class="token string">'q8'</span> <span class="token operator">|</span> <span class="token string">'q4'</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token doc-comment comment">/**
+ * In-browser LLM inference using Liquid AI's LFM2 model via WebGPU.
+ * Requires `wasm-unsafe-eval` CSP and a WebGPU-capable browser.
+ */</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">LFM2WebGPUProvider</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">LLMProvider</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-readonly">readonly</span> name <span class="token operator">=</span> <span class="token string">'LFM2 (WebGPU)'</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-private">private</span> pipeline<span class="token operator">:</span> <span class="token builtin">unknown</span> <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-private">private</span> <span class="token keyword keyword-readonly">readonly</span> config<span class="token operator">:</span> LFM2Config<span class="token punctuation">;</span>
+
+  <span class="token function">constructor</span><span class="token punctuation">(</span>config<span class="token operator">:</span> LFM2Config<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>config <span class="token operator">=</span> config<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">isAvailable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token string">'gpu'</span> <span class="token keyword keyword-in">in</span> navigator<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> available <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span><span class="token function">isAvailable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span>available<span class="token punctuation">)</span> <span class="token keyword keyword-throw">throw</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">ModelLoadError</span><span class="token punctuation">(</span><span class="token string">'WebGPU is not available in this browser.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-const">const</span> <span class="token punctuation">{</span> pipeline <span class="token punctuation">}</span> <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token keyword keyword-import">import</span><span class="token punctuation">(</span><span class="token string">'@huggingface/transformers'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>pipeline <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> <span class="token function">pipeline</span><span class="token punctuation">(</span><span class="token string">'text-generation'</span><span class="token punctuation">,</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>modelId<span class="token punctuation">,</span> <span class="token punctuation">{</span>
+      device<span class="token operator">:</span> <span class="token string">'webgpu'</span><span class="token punctuation">,</span>
+      dtype<span class="token operator">:</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>config<span class="token punctuation">.</span>dtype<span class="token punctuation">,</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">stream</span><span class="token punctuation">(</span>prompt<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> handler<span class="token operator">:</span> StreamHandler<span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> GenerateOptions<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ... streaming implementation</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">generate</span><span class="token punctuation">(</span>prompt<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> GenerateOptions<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// ... full generation implementation</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>pipeline <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h2 id="-code-quality-standards">🎯 Code Quality Standards </h2>
+<p>All code in this project must follow these standards without exception.</p>
+<h3 id="typescript-configuration">TypeScript Configuration </h3>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token comment">// tsconfig.json — strict mode, no escape hatches</span>
+<span class="token punctuation">{</span>
+  <span class="token property">"compilerOptions"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"strict"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"noImplicitAny"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"noImplicitReturns"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"noUncheckedIndexedAccess"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"exactOptionalPropertyTypes"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"noUnusedLocals"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token property">"noUnusedParameters"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><h3 id="rules">Rules </h3>
+<ul>
+<li><strong>No <code>any</code></strong> — use <code>unknown</code> and narrow with type guards</li>
+<li><strong><code>readonly</code> by default</strong> — mutate only when intentional and documented</li>
+<li><strong><code>private</code> by default</strong> — expose only what consumers need</li>
+<li><strong>Interfaces for contracts</strong> — <code>interface</code> for anything that could have multiple implementations</li>
+<li><strong>Abstract classes for shared behavior</strong> — <code>abstract class BaseProvider</code> for common init/dispose logic</li>
+<li><strong>Named errors</strong> — never <code>throw new Error('...')</code>, always a typed subclass from <code>src/core/errors/</code></li>
+<li><strong>Full JSDoc on all public APIs</strong> — every public method and interface property must have a <code>/** */</code> comment</li>
+<li><strong>No implicit returns</strong> — every code path must explicitly return or throw</li>
+<li><strong>Pure functions in <code>core/</code></strong> — no side effects, no I/O, easily unit-testable</li>
+<li><strong>Dependency injection everywhere</strong> — no <code>new ConcreteClass()</code> inside business logic; receive via constructor</li>
+</ul>
+<h3 id="naming-conventions">Naming Conventions </h3>
+<table>
+<thead>
+<tr>
+<th>Construct</th>
+<th>Convention</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Interface</td>
+<td>PascalCase, no <code>I</code> prefix</td>
+<td><code>LLMProvider</code></td>
+</tr>
+<tr>
+<td>Class</td>
+<td>PascalCase</td>
+<td><code>LFM2WebGPUProvider</code></td>
+</tr>
+<tr>
+<td>Private field</td>
+<td>camelCase with <code>private readonly</code></td>
+<td><code>private readonly config</code></td>
+</tr>
+<tr>
+<td>Method</td>
+<td>camelCase, verb-first</td>
+<td><code>embedBatch()</code>, <code>deleteByDomain()</code></td>
+</tr>
+<tr>
+<td>Type alias</td>
+<td>PascalCase</td>
+<td><code>StreamHandler</code></td>
+</tr>
+<tr>
+<td>Constant</td>
+<td>UPPER_SNAKE_CASE</td>
+<td><code>DEFAULT_CHUNK_SIZE</code></td>
+</tr>
+<tr>
+<td>File</td>
+<td>PascalCase for classes, camelCase for utils</td>
+<td><code>LFM2WebGPUProvider.ts</code></td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-chrome-extension-specifics">🔌 Chrome Extension Specifics </h2>
+<h3 id="manifest-key-parts">Manifest (key parts) </h3>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token punctuation">{</span>
+  <span class="token property">"manifest_version"</span><span class="token operator">:</span> <span class="token number">3</span><span class="token punctuation">,</span>
+  <span class="token property">"permissions"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"activeTab"</span><span class="token punctuation">,</span> <span class="token string">"storage"</span><span class="token punctuation">,</span> <span class="token string">"scripting"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"host_permissions"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"&lt;all_urls&gt;"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token property">"content_security_policy"</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token property">"extension_pages"</span><span class="token operator">:</span> <span class="token string">"script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"background"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"service_worker"</span><span class="token operator">:</span> <span class="token string">"dist/background.js"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"action"</span><span class="token operator">:</span> <span class="token punctuation">{</span> <span class="token property">"default_popup"</span><span class="token operator">:</span> <span class="token string">"popup.html"</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+  <span class="token property">"web_accessible_resources"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
+    <span class="token property">"resources"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"dist/workers/*.js"</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+    <span class="token property">"matches"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token string">"&lt;all_urls&gt;"</span><span class="token punctuation">]</span>
+  <span class="token punctuation">}</span><span class="token punctuation">]</span>
+<span class="token punctuation">}</span>
+</code></pre><p><strong>Critical: <code>wasm-unsafe-eval</code> is required</strong> for ONNX/WASM inference in MV3.</p>
+<h3 id="worker-communication-streaming">Worker Communication (streaming) </h3>
+<p>Use <code>chrome.runtime.connect()</code> (long-lived port) for streaming, NOT <code>sendMessage</code> (one-shot):</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// popup.tsx — open port for streaming</span>
+<span class="token keyword keyword-const">const</span> port <span class="token operator">=</span> chrome<span class="token punctuation">.</span>runtime<span class="token punctuation">.</span><span class="token function">connect</span><span class="token punctuation">(</span><span class="token punctuation">{</span> name<span class="token operator">:</span> <span class="token string">'llm-stream'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+port<span class="token punctuation">.</span>onMessage<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token punctuation">(</span>msg<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>msg<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'token'</span><span class="token punctuation">)</span> <span class="token function">appendToken</span><span class="token punctuation">(</span>msg<span class="token punctuation">.</span>token<span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>msg<span class="token punctuation">.</span>type <span class="token operator">===</span> <span class="token string">'done'</span><span class="token punctuation">)</span> <span class="token function">setStreaming</span><span class="token punctuation">(</span><span class="token boolean">false</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+port<span class="token punctuation">.</span><span class="token function">postMessage</span><span class="token punctuation">(</span><span class="token punctuation">{</span> type<span class="token operator">:</span> <span class="token string">'query'</span><span class="token punctuation">,</span> question<span class="token punctuation">,</span> mode <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// background.ts — relay tokens from worker to popup</span>
+chrome<span class="token punctuation">.</span>runtime<span class="token punctuation">.</span>onConnect<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token punctuation">(</span>port<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span>port<span class="token punctuation">.</span>name <span class="token operator">===</span> <span class="token string">'llm-stream'</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    port<span class="token punctuation">.</span>onMessage<span class="token punctuation">.</span><span class="token function">addListener</span><span class="token punctuation">(</span><span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span>msg<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token comment">// spawn LLM worker, pipe tokens back through port</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><h3 id="workers-must-be-declared-as-web-accessible">Workers must be declared as web-accessible </h3>
+<p>Worker files need <code>chrome.runtime.getURL('dist/workers/llm.worker.js')</code> to load correctly from content scripts or the popup.</p>
+<h3 id="indexeddb-for-embedding-persistence">IndexedDB for embedding persistence </h3>
+<p>Use <code>idb</code> library (tiny wrapper) to store embeddings per domain:</p>
+<ul>
+<li>Key: <code>embeddings:{hostname}</code></li>
+<li>Value: <code>{ chunks: ChunkWithEmbedding[], crawledAt: timestamp, sitemapLastmod: string }</code></li>
+</ul>
+<hr>
+<h2 id="-tech-stack--dependencies">📦 Tech Stack &amp; Dependencies </h2>
+<table>
+<thead>
+<tr>
+<th>Package</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>@huggingface/transformers</code></td>
+<td>LFM2 + embeddings, WebGPU backend</td>
+</tr>
+<tr>
+<td><code>turndown</code> + <code>turndown-plugin-gfm</code></td>
+<td>HTML → Markdown</td>
+</tr>
+<tr>
+<td><code>idb</code></td>
+<td>IndexedDB wrapper for embedding persistence</td>
+</tr>
+<tr>
+<td><code>vite</code> + <code>vite-plugin-web-extension</code></td>
+<td>Build system, multi-entry, worker bundling</td>
+</tr>
+<tr>
+<td><code>svelte</code> + <code>@sveltejs/vite-plugin-svelte</code></td>
+<td>Popup &amp; options UI — compiles to vanilla JS, zero runtime</td>
+</tr>
+<tr>
+<td><code>shadcn-svelte</code></td>
+<td>Design system — port of shadcn/ui for Svelte</td>
+</tr>
+<tr>
+<td><code>tailwindcss</code></td>
+<td>Required by shadcn-svelte for utility classes</td>
+</tr>
+<tr>
+<td><code>typescript</code></td>
+<td>Type safety</td>
+</tr>
+</tbody>
+</table>
+<p><strong>No LangChain, no Supabase, no OpenAI SDK</strong> — fully self-contained.</p>
+<hr>
+<h2 id="️-key-challenges--solutions">⚠️ Key Challenges &amp; Solutions </h2>
+<table>
+<thead>
+<tr>
+<th>Challenge</th>
+<th>Solution</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MV3 blocks WASM eval</td>
+<td>Add <code>wasm-unsafe-eval</code> to CSP in manifest</td>
+</tr>
+<tr>
+<td>WebGPU not available everywhere</td>
+<td>Graceful fallback to WASM/CPU (slower but works)</td>
+</tr>
+<tr>
+<td>Model first-load (~600MB)</td>
+<td>Show progress bar, cache in browser after first download</td>
+</tr>
+<tr>
+<td>Workers in MV3</td>
+<td>Use <code>chrome.runtime.getURL()</code> for worker paths; declare in <code>web_accessible_resources</code></td>
+</tr>
+<tr>
+<td>Streaming to popup</td>
+<td>Use <code>chrome.runtime.connect()</code> long-lived ports, NOT <code>sendMessage</code></td>
+</tr>
+<tr>
+<td>CORS on crawled pages</td>
+<td>Background service worker fetches (extensions bypass CORS with <code>host_permissions</code>)</td>
+</tr>
+<tr>
+<td>Re-crawling stale content</td>
+<td>Store <code>sitemapLastmod</code> in IndexedDB, compare on next visit</td>
+</tr>
+<tr>
+<td>Very large pages (Mode 1)</td>
+<td>If markdown &gt; ~3000 tokens, chunk + quick embed + retrieve before LFM2</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="-ui-stack--svelte--shadcn-svelte">🎨 UI Stack — Svelte + shadcn-svelte </h2>
+<p><strong>Why Svelte:</strong> Compiles to minimal vanilla JS at build time — zero runtime overhead, no virtual DOM, ships the smallest possible bundle. Ideal for a Chrome extension popup where every KB matters.</p>
+<p><strong>Why shadcn-svelte:</strong> Official Svelte port of shadcn/ui. Components are copied into your project (not installed as a black-box dependency), fully customizable, built on <code>bits-ui</code> primitives.</p>
+<h3 id="setup">Setup </h3>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code>npx sv create <span class="token builtin class-name">.</span>   <span class="token comment"># Svelte + Vite + TypeScript</span>
+npx shadcn-svelte@latest init
+npx shadcn-svelte@latest <span class="token function">add</span> button card input scroll-area separator badge progress
+</code></pre><h3 id="key-shadcn-svelte-components-to-use">Key shadcn-svelte components to use </h3>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Used for</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Card</code></td>
+<td>Chat message bubbles</td>
+</tr>
+<tr>
+<td><code>Input</code></td>
+<td>Question input field</td>
+</tr>
+<tr>
+<td><code>Button</code></td>
+<td>Send, mode toggle, crawl trigger</td>
+</tr>
+<tr>
+<td><code>ScrollArea</code></td>
+<td>Chat history scroll container</td>
+</tr>
+<tr>
+<td><code>Progress</code></td>
+<td>Model download + crawl progress</td>
+</tr>
+<tr>
+<td><code>Badge</code></td>
+<td>Source URL citations, mode indicator</td>
+</tr>
+<tr>
+<td><code>Separator</code></td>
+<td>UI dividers</td>
+</tr>
+<tr>
+<td><code>Tabs</code></td>
+<td>Page mode / Site mode switcher</td>
+</tr>
+</tbody>
+</table>
+<h3 id="svelte-streaming-pattern">Svelte streaming pattern </h3>
+<pre data-role="codeBlock" data-info="svelte" class="language-svelte svelte"><code>&lt;script lang="ts"&gt;
+  let response = $state('');
+  let streaming = $state(false);
+
+  const port = chrome.runtime.connect({ name: 'llm-stream' });
+
+  port.onMessage.addListener((msg) =&gt; {
+    if (msg.type === 'token') response += msg.token;
+    if (msg.type === 'done') streaming = false;
+  });
+
+  function ask() {
+    response = '';
+    streaming = true;
+    port.postMessage({ type: 'query', question, mode });
+  }
+&lt;/script&gt;
+
+{#if streaming}
+  &lt;span class="animate-pulse"&gt;▋&lt;/span&gt;
+{/if}
+</code></pre><hr>
+<h2 id="-competitive-landscape-for-context">🔬 Competitive Landscape (for context) </h2>
+<p>Existing similar extensions:</p>
+<ul>
+<li><strong>Site RAG</strong> — closest match but requires Supabase + OpenAI key externally</li>
+<li><strong>Lumos</strong> — RAG in browser but requires local Ollama server</li>
+<li><strong>PageChat</strong> — page Q&amp;A only, OpenAI API required</li>
+</ul>
+<p><strong>Our unique position:</strong> Fully self-contained, no external services, offline after first model load, 100% private.</p>
+<hr>
+<h2 id="-testing-strategy--tdd-mandate">🧪 Testing Strategy &amp; TDD Mandate </h2>
+<h3 id="the-law">The Law </h3>
+<blockquote>
+<p><strong>No implementation file may be written before its test file exists and fails.</strong><br>
+Red → Green → Refactor. No exceptions.</p>
+</blockquote>
+<h3 id="test-stack">Test Stack </h3>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>vitest</code></td>
+<td>Unit + contract tests (runs in Node, no browser needed)</td>
+</tr>
+<tr>
+<td><code>@vitest/coverage-v8</code></td>
+<td>Coverage reporting</td>
+</tr>
+<tr>
+<td><code>playwright</code> + <code>@playwright/test</code></td>
+<td>Extension E2E tests in real Chromium</td>
+</tr>
+<tr>
+<td><code>vite-plugin-web-extension</code> test mode</td>
+<td>Loads unpacked extension for Playwright</td>
+</tr>
+</tbody>
+</table>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">pnpm</span> <span class="token builtin class-name">test</span>          <span class="token comment"># unit + contract (watch mode)</span>
+<span class="token function">pnpm</span> test:coverage <span class="token comment"># coverage report</span>
+<span class="token function">pnpm</span> test:e2e      <span class="token comment"># Playwright E2E (slow, runs in CI)</span>
+</code></pre><hr>
+<h3 id="layer-1--unit-tests-srccore">Layer 1 — Unit Tests (<code>src/core/</code>) </h3>
+<p>Pure logic, zero browser APIs, zero Chrome APIs, instant feedback.<br>
+Every class in <code>src/core/</code> must have a corresponding <code>.test.ts</code> file.</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>src/core/rag/RAGPipeline.test.ts
+src/core/rag/Chunker.test.ts
+src/core/rag/PromptBuilder.test.ts
+src/core/extraction/DOMExtractor.test.ts
+src/core/extraction/HTMLToMarkdown.test.ts
+</code></pre><p>Dependency injection makes this trivial — inject mocks, test pure behavior:</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/core/rag/RAGPipeline.test.ts</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> describe<span class="token punctuation">,</span> it<span class="token punctuation">,</span> expect<span class="token punctuation">,</span> beforeEach <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'vitest'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> RAGPipeline <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'./RAGPipeline'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> MockEmbeddingProvider <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/test/mocks/MockEmbeddingProvider'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> MockVectorStore <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/test/mocks/MockVectorStore'</span><span class="token punctuation">;</span>
+
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'RAGPipeline'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-let">let</span> pipeline<span class="token operator">:</span> RAGPipeline<span class="token punctuation">;</span>
+
+  <span class="token function">beforeEach</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    pipeline <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">RAGPipeline</span><span class="token punctuation">(</span>
+      <span class="token keyword keyword-new">new</span> <span class="token class-name">MockEmbeddingProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+      <span class="token keyword keyword-new">new</span> <span class="token class-name">MockVectorStore</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'retrieves top-k chunks ordered by similarity score'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token comment">// arrange: seed MockVectorStore with known chunks + embeddings</span>
+    <span class="token comment">// act: pipeline.retrieve('what is X?', { topK: 3 })</span>
+    <span class="token comment">// assert: returns 3 results, ordered descending by score</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'builds prompt containing all retrieved chunk texts'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'throws EmbeddingError when embedding provider fails'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h3 id="layer-2--provider-contract-tests">Layer 2 — Provider Contract Tests </h3>
+<p>This is the <strong>critical layer</strong> that guarantees swappability.</p>
+<p>A shared contract test suite defines the behavior that <em>every</em> <code>LLMProvider</code> implementation must satisfy. Run it against each concrete provider — they must all pass identically.</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/test/contracts/LLMProviderContract.ts</span>
+
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> describe<span class="token punctuation">,</span> it<span class="token punctuation">,</span> expect <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'vitest'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token keyword keyword-type">type</span> <span class="token punctuation">{</span> LLMProvider <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/core/interfaces/LLMProvider'</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/**
+ * Shared contract test suite for LLMProvider implementations.
+ * Import and call this in every provider's test file.
+ *
+ * <span class="token keyword keyword-@param">@param</span> <span class="token parameter">createProvider</span> - Factory returning a fresh provider instance
+ */</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-function">function</span> <span class="token function">runLLMProviderContractTests</span><span class="token punctuation">(</span>
+  <span class="token function-variable function">createProvider</span><span class="token operator">:</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> LLMProvider
+<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span> <span class="token punctuation">{</span>
+  <span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'LLMProvider contract'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'exposes a non-empty name'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> provider <span class="token operator">=</span> <span class="token function">createProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>provider<span class="token punctuation">.</span>name<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeTruthy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'initialize() resolves without throwing when available'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> provider <span class="token operator">=</span> <span class="token function">createProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword keyword-await">await</span> <span class="token function">expect</span><span class="token punctuation">(</span>provider<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>resolves<span class="token punctuation">.</span>not<span class="token punctuation">.</span><span class="token function">toThrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'generate() returns a non-empty string'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> provider <span class="token operator">=</span> <span class="token function">createProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword keyword-await">await</span> provider<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword keyword-const">const</span> result <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> provider<span class="token punctuation">.</span><span class="token function">generate</span><span class="token punctuation">(</span><span class="token string">'Say hello.'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeTruthy</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span><span class="token keyword keyword-typeof">typeof</span> result<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBe</span><span class="token punctuation">(</span><span class="token string">'string'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'stream() calls handler at least once with token content'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> provider <span class="token operator">=</span> <span class="token function">createProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword keyword-await">await</span> provider<span class="token punctuation">.</span><span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token keyword keyword-const">const</span> tokens<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">[</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+      <span class="token keyword keyword-await">await</span> provider<span class="token punctuation">.</span><span class="token function">stream</span><span class="token punctuation">(</span><span class="token string">'Say hello.'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span>token<span class="token punctuation">)</span> <span class="token operator">=&gt;</span> tokens<span class="token punctuation">.</span><span class="token function">push</span><span class="token punctuation">(</span>token<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span>tokens<span class="token punctuation">.</span>length<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toBeGreaterThan</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'dispose() can be called without throwing'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token keyword keyword-const">const</span> provider <span class="token operator">=</span> <span class="token function">createProvider</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+      <span class="token function">expect</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> provider<span class="token punctuation">.</span><span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">.</span>not<span class="token punctuation">.</span><span class="token function">toThrow</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Each provider test file simply runs the contract + its own specific tests:</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/providers/llm/ClaudeSDKProvider.test.ts</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> runLLMProviderContractTests <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/test/contracts/LLMProviderContract'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> ClaudeSDKProvider <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'./ClaudeSDKProvider'</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Runs the full shared contract</span>
+<span class="token function">runLLMProviderContractTests</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  <span class="token keyword keyword-new">new</span> <span class="token class-name">ClaudeSDKProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span> model<span class="token operator">:</span> <span class="token string">'claude-haiku-4-5-20251001'</span><span class="token punctuation">,</span> apiKey<span class="token operator">:</span> <span class="token string">'test-key'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+<span class="token comment">// Provider-specific tests</span>
+<span class="token function">describe</span><span class="token punctuation">(</span><span class="token string">'ClaudeSDKProvider'</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'passes apiKey in Authorization header'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token function">it</span><span class="token punctuation">(</span><span class="token string">'throws ProviderError on 401 response'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span> <span class="token operator">...</span> <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/providers/llm/LFM2WebGPUProvider.test.ts</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> runLLMProviderContractTests <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/test/contracts/LLMProviderContract'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> LFM2WebGPUProvider <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'./LFM2WebGPUProvider'</span><span class="token punctuation">;</span>
+
+<span class="token function">runLLMProviderContractTests</span><span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span>
+  <span class="token keyword keyword-new">new</span> <span class="token class-name">LFM2WebGPUProvider</span><span class="token punctuation">(</span><span class="token punctuation">{</span> modelId<span class="token operator">:</span> <span class="token string">'LiquidAI/LFM2-1.2B'</span><span class="token punctuation">,</span> dtype<span class="token operator">:</span> <span class="token string">'q4'</span> <span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>Same pattern applies to <code>EmbeddingProvider</code>, <code>VectorStore</code>, and <code>Crawler</code>.</p>
+<hr>
+<h3 id="layer-3--e2e-tests-playwright">Layer 3 — E2E Tests (Playwright) </h3>
+<p>Full extension loaded in real Chromium. Slow, but provides ground truth.</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// e2e/mode1-page-qa.test.ts</span>
+<span class="token keyword keyword-import">import</span> <span class="token punctuation">{</span> test<span class="token punctuation">,</span> expect<span class="token punctuation">,</span> chromium <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@playwright/test'</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-import">import</span> path <span class="token keyword keyword-from">from</span> <span class="token string">'path'</span><span class="token punctuation">;</span>
+
+<span class="token function">test</span><span class="token punctuation">(</span><span class="token string">'Mode 1: answers a question about the current page'</span><span class="token punctuation">,</span> <span class="token keyword keyword-async">async</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-const">const</span> extensionPath <span class="token operator">=</span> path<span class="token punctuation">.</span><span class="token function">resolve</span><span class="token punctuation">(</span><span class="token string">'dist'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-const">const</span> context <span class="token operator">=</span> <span class="token keyword keyword-await">await</span> chromium<span class="token punctuation">.</span><span class="token function">launchPersistentContext</span><span class="token punctuation">(</span><span class="token string">''</span><span class="token punctuation">,</span> <span class="token punctuation">{</span>
+    headless<span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span>
+    args<span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">--disable-extensions-except=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>extensionPath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+      <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">--load-extension=</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>extensionPath<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+  <span class="token comment">// navigate to a test page, open popup, ask question, assert streamed response</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><hr>
+<h3 id="shared-test-mocks">Shared Test Mocks </h3>
+<p>All mocks live in <code>src/test/mocks/</code> and implement the same interfaces:</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// src/test/mocks/MockLLMProvider.ts</span>
+<span class="token keyword keyword-import">import</span> <span class="token keyword keyword-type">type</span> <span class="token punctuation">{</span> LLMProvider<span class="token punctuation">,</span> GenerateOptions<span class="token punctuation">,</span> StreamHandler <span class="token punctuation">}</span> <span class="token keyword keyword-from">from</span> <span class="token string">'@/core/interfaces/LLMProvider'</span><span class="token punctuation">;</span>
+
+<span class="token doc-comment comment">/** Deterministic mock LLMProvider for unit testing. */</span>
+<span class="token keyword keyword-export">export</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">MockLLMProvider</span> <span class="token keyword keyword-implements">implements</span> <span class="token class-name">LLMProvider</span> <span class="token punctuation">{</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-readonly">readonly</span> name <span class="token operator">=</span> <span class="token string">'Mock LLM'</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-public">public</span> initializeCalled <span class="token operator">=</span> <span class="token boolean">false</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-public">public</span> lastPrompt<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token operator">|</span> <span class="token keyword keyword-null">null</span> <span class="token operator">=</span> <span class="token keyword keyword-null">null</span><span class="token punctuation">;</span>
+  <span class="token keyword keyword-public">public</span> mockResponse <span class="token operator">=</span> <span class="token string">'mock response'</span><span class="token punctuation">;</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">isAvailable</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">boolean</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span> <span class="token keyword keyword-return">return</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">initialize</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>initializeCalled <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">generate</span><span class="token punctuation">(</span>prompt<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> _options<span class="token operator">?</span><span class="token operator">:</span> GenerateOptions<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token builtin">string</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>lastPrompt <span class="token operator">=</span> prompt<span class="token punctuation">;</span>
+    <span class="token keyword keyword-return">return</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>mockResponse<span class="token punctuation">;</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token keyword keyword-async">async</span> <span class="token function">stream</span><span class="token punctuation">(</span>prompt<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> handler<span class="token operator">:</span> StreamHandler<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span><span class="token keyword keyword-void">void</span><span class="token operator">&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>lastPrompt <span class="token operator">=</span> prompt<span class="token punctuation">;</span>
+    <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> word <span class="token keyword keyword-of">of</span> <span class="token keyword keyword-this">this</span><span class="token punctuation">.</span>mockResponse<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+      <span class="token function">handler</span><span class="token punctuation">(</span>word <span class="token operator">+</span> <span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+  <span class="token punctuation">}</span>
+
+  <span class="token keyword keyword-public">public</span> <span class="token function">dispose</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</code></pre><hr>
+<h3 id="the-build-loop-mandatory">The Build Loop (Mandatory) </h3>
+<p>For each component, Claude Code must follow this exact sequence:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>1. Write/update interface in src/core/interfaces/
+2. Write contract test (if new provider type) in src/test/contracts/
+3. Write unit test → confirm it FAILS (red)
+4. Write minimal implementation → confirm test PASSES (green)
+5. Refactor if needed → tests still green
+6. Move to next component
+</code></pre><p><strong>Coverage targets:</strong></p>
+<ul>
+<li><code>src/core/</code> → 90%+ line coverage (no excuses, it's pure logic)</li>
+<li><code>src/providers/</code> → 70%+ (provider contract tests cover most of it)</li>
+<li>E2E → at least Mode 1 and Mode 2 happy paths covered</li>
+</ul>
+<hr>
+<h2 id="-build-order-tdd-loop">🚀 Build Order (TDD Loop) </h2>
+<p>Each step = write failing test first, then implement, then green.</p>
+<ol>
+<li><strong>Scaffold</strong> — Vite + vite-plugin-web-extension, TypeScript (strict), Svelte, shadcn-svelte, Vitest, manifest.json</li>
+<li><strong>Core interfaces + mocks</strong> — all interfaces in <code>src/core/interfaces/</code>, all mocks in <code>src/test/mocks/</code></li>
+<li><strong>Contract test suites</strong> — <code>LLMProviderContract</code>, <code>EmbeddingProviderContract</code>, <code>VectorStoreContract</code> (no implementations yet — just the shared test suites)</li>
+<li><strong>Core logic</strong> — <code>DOMExtractor</code>, <code>HTMLToMarkdown</code>, <code>Chunker</code>, <code>PromptBuilder</code> — test → implement each</li>
+<li><strong>RAGPipeline</strong> — test with mocks → implement (proves DI works end to end)</li>
+<li><strong>LFM2 provider</strong> — run contract tests → implement <code>LFM2WebGPUProvider</code> → green</li>
+<li><strong>LLM worker + background</strong> — <code>MessageRouter</code>, port streaming</li>
+<li><strong>Popup UI</strong> — Svelte + shadcn-svelte chat interface, streaming display</li>
+<li><strong>Mode 1 E2E</strong> — Playwright test first → wire content → background → LLM worker → popup</li>
+<li><strong>Embedding provider</strong> — contract tests → implement <code>TransformersEmbeddingProvider</code></li>
+<li><strong>Vector stores</strong> — contract tests → <code>InMemoryVectorStore</code> → <code>IndexedDBVectorStore</code></li>
+<li><strong>Crawler</strong> — contract tests → implement <code>SitemapCrawler</code></li>
+<li><strong>Mode 2 E2E</strong> — Playwright test first → full RAG conversation</li>
+<li><strong>ClaudeSDKProvider</strong> — run existing LLM contract tests → implement → green (proves swap)</li>
+<li><strong>Options page</strong> — provider config, model selection, cache management</li>
+<li><strong>Polish</strong> — WebGPU fallback, progress indicators, error boundaries</li>
+</ol>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

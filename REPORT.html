@@ -1,0 +1,555 @@
+<!DOCTYPE html><html><head>
+      <title>REPORT</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\julie\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.20\crossnote\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      <style>
+      code[class*=language-],pre[class*=language-]{color:#333;background:0 0;font-family:Consolas,"Liberation Mono",Menlo,Courier,monospace;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.4;-moz-tab-size:8;-o-tab-size:8;tab-size:8;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none}pre[class*=language-]{padding:.8em;overflow:auto;border-radius:3px;background:#f5f5f5}:not(pre)>code[class*=language-]{padding:.1em;border-radius:.3em;white-space:normal;background:#f5f5f5}.token.blockquote,.token.comment{color:#969896}.token.cdata{color:#183691}.token.doctype,.token.macro.property,.token.punctuation,.token.variable{color:#333}.token.builtin,.token.important,.token.keyword,.token.operator,.token.rule{color:#a71d5d}.token.attr-value,.token.regex,.token.string,.token.url{color:#183691}.token.atrule,.token.boolean,.token.code,.token.command,.token.constant,.token.entity,.token.number,.token.property,.token.symbol{color:#0086b3}.token.prolog,.token.selector,.token.tag{color:#63a35c}.token.attr-name,.token.class,.token.class-name,.token.function,.token.id,.token.namespace,.token.pseudo-class,.token.pseudo-element,.token.url-reference .token.variable{color:#795da3}.token.entity{cursor:help}.token.title,.token.title .token.punctuation{font-weight:700;color:#1d3e81}.token.list{color:#ed6a43}.token.inserted{background-color:#eaffea;color:#55a532}.token.deleted{background-color:#ffecec;color:#bd2c00}.token.bold{font-weight:700}.token.italic{font-style:italic}.language-json .token.property{color:#183691}.language-markup .token.tag .token.punctuation{color:#333}.language-css .token.function,code.language-css{color:#0086b3}.language-yaml .token.atrule{color:#63a35c}code.language-yaml{color:#183691}.language-ruby .token.function{color:#333}.language-markdown .token.url{color:#795da3}.language-makefile .token.symbol{color:#795da3}.language-makefile .token.variable{color:#183691}.language-makefile .token.builtin{color:#0086b3}.language-bash .token.keyword{color:#0086b3}pre[data-line]{position:relative;padding:1em 0 1em 3em}pre[data-line] .line-highlight-wrapper{position:absolute;top:0;left:0;background-color:transparent;display:block;width:100%}pre[data-line] .line-highlight{position:absolute;left:0;right:0;padding:inherit 0;margin-top:1em;background:hsla(24,20%,50%,.08);background:linear-gradient(to right,hsla(24,20%,50%,.1) 70%,hsla(24,20%,50%,0));pointer-events:none;line-height:inherit;white-space:pre}pre[data-line] .line-highlight:before,pre[data-line] .line-highlight[data-end]:after{content:attr(data-start);position:absolute;top:.4em;left:.6em;min-width:1em;padding:0 .5em;background-color:hsla(24,20%,50%,.4);color:#f4f1ef;font:bold 65%/1.5 sans-serif;text-align:center;vertical-align:.3em;border-radius:999px;text-shadow:none;box-shadow:0 1px #fff}pre[data-line] .line-highlight[data-end]:after{content:attr(data-end);top:auto;bottom:.4em}html body{font-family:'Helvetica Neue',Helvetica,'Segoe UI',Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ol,html body>ul{margin-bottom:16px}html body ol,html body ul{padding-left:2em}html body ol.no-list,html body ul.no-list{padding:0;list-style-type:none}html body ol ol,html body ol ul,html body ul ol,html body ul ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:700;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::after,html body code::before{letter-spacing:-.2em;content:'\00a0'}html body pre>code{padding:0;margin:0;word-break:normal;white-space:pre;background:0 0;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:after,html body pre code:before,html body pre tt:after,html body pre tt:before{content:normal}html body blockquote,html body dl,html body ol,html body p,html body pre,html body ul{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body code,html body pre{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview ul{list-style:disc}.markdown-preview ul ul{list-style:circle}.markdown-preview ul ul ul{list-style:square}.markdown-preview ol{list-style:decimal}.markdown-preview ol ol,.markdown-preview ul ol{list-style-type:lower-roman}.markdown-preview ol ol ol,.markdown-preview ol ul ol,.markdown-preview ul ol ol,.markdown-preview ul ul ol{list-style-type:lower-alpha}.markdown-preview .newpage,.markdown-preview .pagebreak{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center!important}.markdown-preview:not([data-for=preview]) .code-chunk .code-chunk-btn-group{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .status{display:none}.markdown-preview:not([data-for=preview]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0;min-height:100vh}@media screen and (min-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode]) .markdown-preview{font-size:14px!important;padding:1em}}@media print{html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for=html-export]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,.66);border:4px solid rgba(150,150,150,.66);background-clip:content-box}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div,html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p{display:inline}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% - 300px);padding:2em calc(50% - 457px - 300px / 2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for=html-export]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for=html-export]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+html body[for="html-export"] .markdown-preview h1 {
+  color: red !important;
+}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+/* Plain CSS selectors to ensure HTML export picks up the theme */
+html body[for="html-export"] {
+  background: #0f1419 !important;
+  color: #d6deeb !important;
+}
+/* Cancel the built-in left: 50% / translateX(-50%) centering so margin: auto works */
+html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview {
+  left: auto !important;
+  transform: none !important;
+}
+html body[for="html-export"] .markdown-preview {
+  background: #0f1419 !important;
+  color: #d6deeb !important;
+  font-family: "Segoe UI", "Inter", sans-serif !important;
+  line-height: 1.7 !important;
+  max-width: 920px !important;
+  margin: 0 auto !important;
+  padding: 2.5rem 2rem !important;
+}
+html body[for="html-export"] .markdown-preview hr {
+  background-color: transparent !important;
+  display: block;
+  margin-top: 50px !important;
+  border: none !important;
+}
+strong {
+  color: #b8c6d8 !important;
+}
+html body[for="html-export"] .markdown-preview h1,
+html body[for="html-export"] .markdown-preview h2,
+html body[for="html-export"] .markdown-preview h3,
+html body[for="html-export"] .markdown-preview h4,
+html body[for="html-export"] .markdown-preview h5,
+html body[for="html-export"] .markdown-preview h6 {
+  color: #06b6d4 !important;
+  letter-spacing: 0.01em;
+  border: none !important;
+}
+html body[for="html-export"] .markdown-preview h1 {
+  border-bottom: 2px solid #06b6d4;
+  padding-bottom: 0.45rem;
+}
+html body[for="html-export"] .markdown-preview h2,
+html body[for="html-export"] .markdown-preview h3 {
+  border-bottom: 1px solid #1f2a33;
+  padding-bottom: 0.35rem;
+}
+html body[for="html-export"] .markdown-preview p,
+html body[for="html-export"] .markdown-preview li {
+  color: #d6deeb !important;
+}
+html body[for="html-export"] .markdown-preview a {
+  color: #06b6d4 !important;
+  text-decoration: none;
+}
+html body[for="html-export"] .markdown-preview a:hover {
+  text-decoration: underline;
+}
+html body[for="html-export"] .markdown-preview hr {
+  border: 0;
+  border-top: 1px solid #1f2a33;
+}
+html body[for="html-export"] .markdown-preview blockquote {
+  background: #121a21;
+  border-left: 4px solid #06b6d4;
+  color: #b8c6d8 !important;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+}
+html body[for="html-export"] .markdown-preview code {
+  background: #17212b !important;
+  color: #7dd3fc !important;
+  border-radius: 4px;
+  padding: 0.1em 0.35em;
+}
+html body[for="html-export"] .markdown-preview pre,
+html body[for="html-export"] .markdown-preview .highlight pre {
+  background: #121a21 !important;
+  border: 1px solid #1f2a33 !important;
+  border-radius: 8px;
+}
+html body[for="html-export"] .markdown-preview pre code {
+  color: #d6deeb !important;
+  background: transparent !important;
+  padding: 0;
+}
+html body[for="html-export"] .markdown-preview table {
+  border-collapse: collapse;
+  width: 100%;
+}
+html body[for="html-export"] .markdown-preview th,
+html body[for="html-export"] .markdown-preview td {
+  border: 1px solid #1f2a33 !important;
+  padding: 0.5rem 0.7rem;
+}
+html body[for="html-export"] .markdown-preview th {
+  background: #121a21;
+  color: #06b6d4 !important;
+}
+html body[for="html-export"] .markdown-preview img {
+  display: block;
+  margin: 1.25rem auto;
+  max-width: 100%;
+  border: 1px solid #1f2a33;
+  border-radius: 10px;
+}
+
+      </style>
+      <!-- The content below will be included at the end of the <head> element. --><!-- Open Graph (Facebook, LinkedIn, Discord, Slack, etc.) --><meta property="og:title" content="We're Gonna Need a Bigger Boat">
+<meta property="og:description" content="Rethinking Version Control, IDEs, and Workflows for the AI Development Era.">
+<meta property="og:image" content="https://codelake.ai/manifesto/bigger_boat.jpg">
+<meta property="og:url" content="https://codelake.ai/manifesto/were_gonna_need_a_bigger_boat.html">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="codelake.ai">
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="We're Gonna Need a Bigger Boat">
+<meta name="twitter:description" content="Rethinking Version Control, IDEs, and Workflows for the AI Development Era">
+<meta name="twitter:image" content="https://codelake.ai/manifesto/bigger_boat.jpg">
+<meta name="twitter:site" content="https://codelake.ai/manifesto/were_gonna_need_a_bigger_boat.html">
+<meta name="twitter:creator" content="Julien Borrel - codelake.ai">
+
+<!-- General -->
+<meta name="description" content="Rethinking Version Control, IDEs, and Workflows for the AI Development Era">
+<meta name="author" content="Julien Borrel - codelake.ai">
+<!-- Google tag (gtag.js) -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-MKG6PXETCF"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', 'G-MKG6PXETCF');
+</script>
+<script type="text/javascript">
+  document.addEventListener("DOMContentLoaded", function () {
+    // your code here
+  });
+</script></head><body for="html-export">
+    
+    
+      <div class="crossnote markdown-preview  ">
+      
+<h1 id="agentic-coding-experiment---comparative-report">Agentic Coding Experiment - Comparative Report </h1>
+<hr>
+<p><strong>Challenge</strong>: Build a Chrome Extension (MV3) that lets users chat with any website using 100% in-browser AI inference (WebGPU + transformers.js). No API keys, no servers, offline after first model load.</p>
+<p><strong>Agents evaluated</strong>: Claude Code CLI · Codex CLI · Gemini CLI<br>
+<strong>Spec files</strong>: <code>CLAUDE.md</code> (Claude) / <code>SPECIFICATIONS.md</code> (Codex, Gemini)<br>
+<strong>Output directories</strong>: <code>claude_code_version/</code> · <code>codex_version/</code> · <code>gemini_version/</code></p>
+<hr>
+<h2 id="1-executive-summary">1. Executive Summary </h2>
+<p>All three agents produced implementations that share the same high-level architecture — the spec was detailed enough that it imposed a strong structural template.</p>
+<p>The differences that matter lie in <strong>completeness</strong>, <strong>specific design decisions</strong>, and <strong>where each agent chose to invest effort</strong>.</p>
+<p>No implementation is uniformly superior.</p>
+<table>
+<thead>
+<tr>
+<th>Dimension</th>
+<th>Claude</th>
+<th>Codex</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UI framework</td>
+<td>Svelte 5 (Runes)</td>
+<td><strong>Vanilla TypeScript</strong></td>
+<td>Svelte 4</td>
+</tr>
+<tr>
+<td>Mode 1 (Page Q&amp;A)</td>
+<td>✅ Implemented</td>
+<td>✅ Implemented</td>
+<td>✅ Implemented</td>
+</tr>
+<tr>
+<td>Mode 2 (Site RAG)</td>
+<td>✅ Implemented</td>
+<td>✅ Implemented</td>
+<td>❌ Stubbed</td>
+</tr>
+<tr>
+<td>Worker architecture</td>
+<td>✅ All 3 integrated</td>
+<td>⚠️ Stubbed</td>
+<td>⚠️ LLM only</td>
+</tr>
+<tr>
+<td>Claude streaming</td>
+<td>⚠️ Simulated</td>
+<td>⚠️ Simulated</td>
+<td>✅ Real SSE</td>
+</tr>
+<tr>
+<td>Contract tests</td>
+<td>✅ 4 suites</td>
+<td>✅ 4 suites</td>
+<td>✅ 3 suites</td>
+</tr>
+<tr>
+<td>Fallback providers</td>
+<td>❌ None</td>
+<td>✅ LLM + Embedding</td>
+<td>❌ None</td>
+</tr>
+<tr>
+<td>IndexedDB in tests</td>
+<td>❌</td>
+<td>❌</td>
+<td>✅ (fake-indexeddb)</td>
+</tr>
+<tr>
+<td>Unique extras</td>
+<td>ProgressTracker, AsyncGenerator crawler, ErrorBoundary</td>
+<td>FallbackProviders, SiteRAGService, MVC controllers, Coverage report</td>
+<td>Real SSE, lucide icons</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="2-common-ground">2. Common Ground </h2>
+<p>Given the detailed spec, all three agents converged on a remarkably similar foundation. These choices were essentially universal:</p>
+<h3 id="21-identical-typescript-strictness">2.1 Identical TypeScript strictness </h3>
+<p>Every implementation uses the exact same compiler flags from the spec:</p>
+<pre data-role="codeBlock" data-info="json" class="language-json json"><code><span class="token property">"strict"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token property">"noImplicitAny"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token property">"noImplicitReturns"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token property">"noUncheckedIndexedAccess"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token property">"exactOptionalPropertyTypes"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+<span class="token property">"noUnusedLocals"</span><span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span> <span class="token property">"noUnusedParameters"</span><span class="token operator">:</span> <span class="token boolean">true</span>
+</code></pre><p>All use <code>moduleResolution: "bundler"</code> and a <code>@/*</code> path alias.</p>
+<h3 id="22-near-identical-core-interfaces">2.2 Near-identical core interfaces </h3>
+<p><code>LLMProvider</code>, <code>EmbeddingProvider</code>, <code>VectorStore</code> are nearly copy-identical across all three — clear evidence that the spec interfaces were taken as authoritative.</p>
+<p>The most notable divergence is in the <code>Crawler</code> interface (see §4.4).</p>
+<h3 id="23-same-tech-stack-for-ai">2.3 Same tech stack for AI </h3>
+<ul>
+<li><code>@huggingface/transformers</code> for WebGPU inference</li>
+<li><code>Xenova/all-MiniLM-L6-v2</code> (384 dims, q8) for embeddings</li>
+<li><code>LiquidAI/LFM2-1.2B</code> (q4) as the primary LLM</li>
+<li><code>idb</code> for IndexedDB persistence</li>
+<li><code>turndown</code> + <code>turndown-plugin-gfm</code> for HTML→Markdown</li>
+<li><code>vitest</code> + <code>@playwright/test</code> for testing</li>
+</ul>
+<h3 id="24-shared-provider-pattern">2.4 Shared provider pattern </h3>
+<p>All three implement the <code>core/</code> → <code>providers/</code> dependency flow the spec mandates, use factory/config files for provider wiring, and implement the same four provider categories (LLM, Embedding, VectorStore, Crawler).</p>
+<h3 id="25-contract-test-pattern">2.5 Contract test pattern </h3>
+<p>All three implement the spec's "shared contract test suite" pattern — a function like <code>runLLMProviderContractTests(createProvider)</code> that verifies interface compliance independent of implementation.</p>
+<h3 id="26-cosine-similarity--on-brute-force">2.6 Cosine similarity — O(n) brute force </h3>
+<p>All three vector stores use the same approach: load all records into memory, compute cosine similarity against the query vector, sort descending. No HNSW or approximation. A reasonable trade-off for a browser context with expected corpus sizes.</p>
+<h3 id="27-regex-based-sitemap-parsing">2.7 Regex-based sitemap parsing </h3>
+<p>None of the crawlers use a proper XML parser — all rely on <code>/&lt;loc&gt;(.*?)&lt;\/loc&gt;/g</code>. Acceptable given the controlled format of sitemap.xml files.</p>
+<hr>
+<h2 id="3-architecture-overview">3. Architecture Overview </h2>
+<h3 id="31-folder-structure">3.1 Folder structure </h3>
+<p>The spec prescribed a specific structure. All three follow it closely:</p>
+<pre data-role="codeBlock" data-info="" class="language-text"><code>                         Claude      Codex       Gemini
+core/interfaces/           ✅          ✅          ✅
+core/errors/               ✅          ✅          ✅
+core/rag/                  ✅          ✅          ✅
+core/extraction/           ✅          ✅          ✅
+providers/{llm,emb,vs,cr}  ✅          ✅          ✅
+background/                ✅          ✅          ✅
+content/                   ✅          ✅          ✅
+workers/ (3 files)         ✅          ✅ (stub)   ⚠️ (partial)
+config/providers.config.ts ✅          ✅          ✅
+test/contracts/            ✅          ✅          ✅
+test/mocks/                ✅          ✅          ✅
+popup/ (Svelte)            ✅          ❌ (TS)     ✅
+options/ (Svelte)          ✅          ❌ (TS)     ✅
+</code></pre><p><strong>Notable extras:</strong></p>
+<ul>
+<li><strong>Claude</strong> adds: <code>core/capabilities.ts</code> (feature detection), <code>core/ProgressTracker.ts</code>, <code>lib/</code> (full shadcn/bits-ui component library), <code>src/popup/ChatMessage.svelte</code>, <code>src/popup/ErrorBoundary.svelte</code></li>
+<li><strong>Codex</strong> adds: <code>background/SiteRAGService.ts</code> (dedicated orchestration layer), <code>popup/PopupController.ts</code>, <code>options/OptionsController.ts</code>, <code>providers/llm/FallbackLLMProvider.ts</code>, <code>providers/embedding/FallbackEmbeddingProvider.ts</code>, <code>test/scaffold/</code></li>
+<li><strong>Gemini</strong> stays closest to the minimal spec structure</li>
+</ul>
+<hr>
+<h2 id="4-detailed-comparison-by-dimension">4. Detailed Comparison by Dimension </h2>
+<h3 id="41-ui-framework">4.1 UI Framework </h3>
+<p><strong>Claude - Svelte 5 (Runes reactive system)</strong></p>
+<p>Uses <code>$state()</code> runes (Svelte 5's new primitives), a proper component hierarchy (<code>App.svelte</code>, <code>ChatMessage.svelte</code>), and a real component library (<code>lib/components/ui/</code>) adapted from bits-ui/shadcn. The popup stores full chat history as a <code>Message[]</code> array, rendering past exchanges. The options page includes storage estimation and API key input.</p>
+<p><strong>Codex - Vanilla TypeScript (significant spec deviation)</strong></p>
+<p>Chose not to use Svelte at all. Instead the UI is built with <code>innerHTML</code> string injection and <code>PopupController</code>/<code>OptionsController</code> classes that manage DOM state via an MVC-like pattern. This is the most significant deviation from the spec (which explicitly mandates Svelte + shadcn-svelte). The trade-off: eliminates the Svelte build complexity, produces simpler debugging. The downside: verbose DOM manipulation, harder to extend.</p>
+<p><strong>Gemini - Svelte 4</strong></p>
+<p>Uses Svelte 4 (stable, not Runes). Implements <code>bits-ui</code> headless components and <code>lucide-svelte</code> for icons. The popup is a single <code>popup.svelte</code> file with local reactive variables — clean and idiomatic Svelte 4. One missing feature: chat history is replaced on each query (no conversation memory between turns).</p>
+<p><strong>Assessment</strong>: Claude's Svelte 5 choice is forward-looking but Svelte 5 was still very new at time of writing. Gemini's Svelte 4 is safer and production-proven. Codex's vanilla TS is pragmatic but diverges from the spec's UI mandate.</p>
+<hr>
+<h3 id="42-error-hierarchy">4.2 Error Hierarchy </h3>
+<p>All three implement the spec-mandated error types. The structures differ slightly:</p>
+<p><strong>Claude</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-class">class</span> <span class="token class-name">ExtensionError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Error</span> <span class="token punctuation">{</span> code<span class="token operator">:</span> <span class="token builtin">string</span> <span class="token punctuation">}</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ModelLoadError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>    <span class="token comment">// + no extra fields</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CrawlError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>        <span class="token comment">// + url: string</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">EmbeddingError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ProviderError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>     <span class="token comment">// + provider: string</span>
+</code></pre><p>Most informative — errors carry contextual fields (<code>url</code>, <code>provider</code>) enabling precise logging and recovery.</p>
+<p><strong>Codex</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">BaseDomainError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Error</span>   <span class="token comment">// sets name property</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ModelLoadError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">BaseDomainError</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CrawlError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">BaseDomainError</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">EmbeddingError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">BaseDomainError</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ProviderError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">BaseDomainError</span>
+</code></pre><p>Uses <code>abstract</code> base class, which prevents accidental instantiation of the base type. No extra context fields.</p>
+<p><strong>Gemini</strong></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-abstract">abstract</span> <span class="token keyword keyword-class">class</span> <span class="token class-name">ExtensionError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">Error</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ModelLoadError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">CrawlError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">EmbeddingError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>
+<span class="token keyword keyword-class">class</span> <span class="token class-name">ProviderError</span> <span class="token keyword keyword-extends">extends</span> <span class="token class-name">ExtensionError</span>
+</code></pre><p>Same shape as Codex (abstract base), same name as Claude's non-abstract version. No extra context fields.</p>
+<p><strong>Assessment</strong>:</p>
+<p>Claude's variant is marginally more useful for production debugging because errors carry contextual data. All three are functionally correct.</p>
+<hr>
+<h3 id="43-rag-pipeline">4.3 RAG Pipeline </h3>
+<p>All three implement the same logical pipeline: <code>ingest(page)</code> → chunk → embed → store, and <code>retrieve(query)</code> → embed query → cosine search → top-K results.</p>
+<p>Key differences:</p>
+<p><strong>Chunker algorithm</strong>:</p>
+<p>All three use word-based tokenization (not subword) as a proxy for token count — a pragmatic approximation that matches the spec examples. The sliding-window overlap logic is identical.</p>
+<p><strong>PromptBuilder</strong>:</p>
+<p>All three generate two prompt variants (page mode and RAG/site mode with <code>[Source N]</code> citations). The exact phrasing differs but the structure matches the spec.</p>
+<p><strong>RAGPipeline integration level</strong>:</p>
+<ul>
+<li>Claude and Codex wire the RAGPipeline into the background service worker for Mode 2.</li>
+<li>Gemini's <code>RAGPipeline</code> is fully implemented as a class but the <code>MessageRouter</code> returns <code>"Site mode not implemented yet"</code> for site queries — the pipeline exists but is not connected to the message path.</li>
+</ul>
+<hr>
+<h3 id="44-crawler-interface--a-real-design-difference">4.4 Crawler Interface — A Real Design Difference </h3>
+<p>This is the sharpest architectural divergence across the three implementations:</p>
+<p><strong>Claude</strong> — <code>AsyncGenerator&lt;CrawlResult&gt;</code></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-interface">interface</span> <span class="token class-name">Crawler</span> <span class="token punctuation">{</span>
+  <span class="token function">crawl</span><span class="token punctuation">(</span>baseUrl<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> CrawlOptions<span class="token punctuation">)</span><span class="token operator">:</span> AsyncGenerator<span class="token operator">&lt;</span>CrawlResult<span class="token operator">&gt;</span><span class="token punctuation">;</span>
+  <span class="token function">abort</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> <span class="token keyword keyword-void">void</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Streaming crawl: results are yielded page-by-page as they arrive. This enables progressive UI updates (e.g., "crawling page 12 of 50") and allows the embedding pipeline to start processing early pages while later pages are still being fetched.</p>
+<p>The <code>abort()</code> method enables cooperative cancellation.</p>
+<p><strong>Codex &amp; Gemini</strong> — <code>Promise&lt;CrawlResult[]&gt;</code></p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-interface">interface</span> <span class="token class-name">Crawler</span> <span class="token punctuation">{</span>
+  <span class="token function">crawl</span><span class="token punctuation">(</span>rootUrl<span class="token operator">:</span> <span class="token builtin">string</span><span class="token punctuation">,</span> options<span class="token operator">?</span><span class="token operator">:</span> CrawlOptions<span class="token punctuation">)</span><span class="token operator">:</span> <span class="token builtin">Promise</span><span class="token operator">&lt;</span>CrawlResult<span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token operator">&gt;</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre><p>Batch crawl: all pages are fetched before returning. Simpler to consume but requires the full crawl to complete before any embedding can start.</p>
+<p><strong>Assessment</strong>:</p>
+<p>Claude's AsyncGenerator design is architecturally superior for this use case — it enables pipeline parallelism and gives users progressive feedback. The <code>abort()</code> method is also practically necessary for a 50-page crawl triggered from a browser popup. However, it requires more sophisticated consumption code in the background worker.</p>
+<hr>
+<h3 id="45-claude-api-streaming--simulated-vs-real">4.5 Claude API Streaming — Simulated vs. Real </h3>
+<p>The spec calls for streaming tokens. The Claude SDK provider is a fallback for when WebGPU isn't available:</p>
+<p><strong>Claude &amp; Codex</strong> — Simulated streaming</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// Fetch full response, then split into words and emit one by one</span>
+<span class="token keyword keyword-const">const</span> words <span class="token operator">=</span> fullResponse<span class="token punctuation">.</span><span class="token function">split</span><span class="token punctuation">(</span><span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token keyword keyword-const">const</span> word <span class="token keyword keyword-of">of</span> words<span class="token punctuation">)</span> <span class="token function">handler</span><span class="token punctuation">(</span>word <span class="token operator">+</span> <span class="token string">' '</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+</code></pre><p>This gives the visual appearance of streaming but fires all tokens near-simultaneously after a single HTTP round-trip. Latency to first token equals total response time.</p>
+<p><strong>Gemini</strong> — Real SSE streaming</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token keyword keyword-const">const</span> reader <span class="token operator">=</span> response<span class="token punctuation">.</span>body<span class="token punctuation">.</span><span class="token function">getReader</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token keyword keyword-const">const</span> decoder <span class="token operator">=</span> <span class="token keyword keyword-new">new</span> <span class="token class-name">TextDecoder</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token comment">// Parse Server-Sent Events: "data: {...}" lines</span>
+<span class="token comment">// Extract delta.text from each event, call handler per token</span>
+</code></pre><p>Uses the Anthropic API's native streaming endpoint. True time-to-first-token behavior. Correctly handles <code>[DONE]</code> terminators and gracefully ignores parse errors. Requires the <code>anthropic-dangerous-direct-browser-access: true</code> header (a real header the Anthropic API accepts for browser-direct calls).</p>
+<p><strong>Assessment</strong>: Gemini's implementation is the most correct for the Claude provider. The simulated approach works but misrepresents what streaming means to the user.</p>
+<hr>
+<h3 id="46-fallback-providers-codex-unique">4.6 Fallback Providers (Codex Unique) </h3>
+<p>Codex is the only implementation that ships explicit fallback providers for development/testing:</p>
+<pre data-role="codeBlock" data-info="typescript" class="language-typescript typescript"><code><span class="token comment">// FallbackLLMProvider — always available, returns "Mock answer: [preview]"</span>
+<span class="token comment">// FallbackEmbeddingProvider — 8-dim deterministic hash (same text → same vector)</span>
+</code></pre><p>The <code>IndexedDBVectorStore</code> also falls back to an in-memory <code>Map</code> if IndexedDB is unavailable. This cascade (<code>WebGPU → Fallback LLM</code>, <code>IndexedDB → Map</code>) means the extension always loads and responds, even in environments without GPU or persistent storage — useful for CI testing and development.</p>
+<p><strong>Assessment</strong>:</p>
+<p>A pragmatic engineering choice. The spec doesn't require it but it noticeably improves DX during development. The trade-off is added surface area to maintain.</p>
+<hr>
+<h3 id="47-worker-architecture">4.7 Worker Architecture </h3>
+<p>The spec calls for three dedicated workers (<code>llm.worker.ts</code>, <code>embedder.worker.ts</code>, <code>crawler.worker.ts</code>) to keep inference off the main thread:</p>
+<p><strong>Claude</strong></p>
+<p>All three workers fully wired</p>
+<p>Each worker handles typed messages (<code>initialize</code>, <code>generate</code>, <code>stream</code>, <code>dispose</code> for the LLM worker; <code>init</code>, <code>embed</code>, <code>embedBatch</code> for the embedder; <code>crawl</code>, <code>abort</code> for the crawler). The background service worker communicates with these workers via <code>postMessage</code>. Request IDs enable multiplexed concurrent requests.</p>
+<p><strong>Codex</strong></p>
+<p>Workers present, not integrated</p>
+<p>Worker files exist and contain correct implementations, but <code>background.ts</code> calls providers directly rather than through workers. The spec's performance goal of keeping inference off the service worker thread is not achieved.</p>
+<p><strong>Gemini</strong></p>
+<p>LLM worker active, others unused</p>
+<p><code>MessageRouter</code> creates a new Worker per query using <code>chrome.runtime.getURL('src/workers/llm.worker.js')</code>. This means model initialization happens on every query — no caching of the loaded pipeline between requests. The embedder and crawler workers exist but are never used; the background handles embedding and crawling inline.</p>
+<p><strong>Assessment</strong>:</p>
+<p>Claude's worker architecture is most aligned with the spec. Creating a new worker per query (Gemini) is resource-intensive and reloads the model on every question. Codex's inline-provider approach is simpler but blocks the service worker during inference.</p>
+<hr>
+<h3 id="48-testing">4.8 Testing </h3>
+<h4 id="contract-tests-all-three">Contract tests (all three) </h4>
+<p>All three implement the contract test pattern from the spec. Coverage varies:</p>
+<table>
+<thead>
+<tr>
+<th>Contract</th>
+<th>Claude</th>
+<th>Codex</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LLMProviderContract</code></td>
+<td>✅ 6 tests</td>
+<td>✅ 5 tests</td>
+<td>✅ 5 tests</td>
+</tr>
+<tr>
+<td><code>EmbeddingProviderContract</code></td>
+<td>✅ 6 tests</td>
+<td>✅ 4 tests</td>
+<td>✅ 5 tests</td>
+</tr>
+<tr>
+<td><code>VectorStoreContract</code></td>
+<td>✅ 8 tests</td>
+<td>✅ 5 tests</td>
+<td>✅ 6 tests</td>
+</tr>
+<tr>
+<td><code>CrawlerContract</code></td>
+<td>✅ 4 tests</td>
+<td>✅ 2 tests</td>
+<td>❌ Missing</td>
+</tr>
+</tbody>
+</table>
+<h4 id="unit-test-depth">Unit test depth </h4>
+<p><strong>Claude</strong></p>
+<p>has the broadest test suite (~130 unit tests). Notable coverage: <code>MessageRouter</code>, <code>ProgressTracker</code>, <code>capabilities</code>, <code>ErrorBoundary</code>, all core RAG components, all providers, and the mock implementations themselves.</p>
+<p><strong>Codex</strong></p>
+<p>has visible coverage metrics (<code>56.69%</code> statements, <code>85.71%</code> functions reported in the coverage HTML). Unique tests: <code>Scaffold.test.ts</code> verifies the project structure itself (that key files exist), <code>PopupController.test.ts</code> and <code>OptionsController.test.ts</code> test UI state machines directly without a browser.</p>
+<p><strong>Gemini</strong></p>
+<p>has fewer tests. Several test files are near-empty stubs (<code>SitemapCrawler.test.ts</code> — basic instantiation only; <code>InMemoryVectorStore.test.ts</code> — 3 lines). However, Gemini alone uses <code>fake-indexeddb</code> to provide a real IndexedDB polyfill in the test environment — enabling <code>IndexedDBVectorStore</code> tests that actually exercise the async database code, not just structure.</p>
+<h4 id="e2e-tests-all-three">E2E tests (all three) </h4>
+<p>All three create <code>e2e/mode1-page-qa.test.ts</code> and <code>e2e/mode2-site-rag.test.ts</code> with Playwright. All three load the extension in a real Chromium instance. The assertions are largely structural (popup loads, mode can be toggled) — none test actual LLM inference in E2E (WebGPU is unavailable in CI headless Chromium, a known constraint the spec acknowledges).</p>
+<hr>
+<h3 id="49-options-page-completeness">4.9 Options Page Completeness </h3>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Claude</th>
+<th>Codex</th>
+<th>Gemini</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM provider selection</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>API key input (Claude)</td>
+<td>✅</td>
+<td>✅</td>
+<td>❌ Missing</td>
+</tr>
+<tr>
+<td>Max pages/depth config</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td>Storage estimate display</td>
+<td>✅ (real)</td>
+<td>⚠️ (static)</td>
+<td>❌ (hardcoded 0)</td>
+</tr>
+<tr>
+<td>Clear vector cache</td>
+<td>✅ (works)</td>
+<td>✅ (works)</td>
+<td>❌ (stub/alert)</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="5-notable-divergences-from-spec">5. Notable Divergences from Spec </h2>
+<h3 id="51-codex-drops-svelte-entirely">5.1 Codex drops Svelte entirely </h3>
+<p>The spec is explicit: "Svelte + shadcn-svelte". Codex builds the UI with vanilla TypeScript and <code>innerHTML</code>. This is the most significant deviation from the specification. The code works, but it contradicts a stated architectural decision.</p>
+<h3 id="52-gemini-leaves-mode-2-unimplemented">5.2 Gemini leaves Mode 2 unimplemented </h3>
+<p>The <code>MessageRouter</code> in Gemini returns <code>"Site mode not implemented yet"</code> for site-mode queries. The RAGPipeline, vector store, embedding provider, and crawler are all implemented in isolation — but not connected to the user-facing message path. Mode 2 is the spec's primary feature differentiator.</p>
+<h3 id="53-claudes-crawler-uses-asyncgenerator">5.3 Claude's Crawler uses AsyncGenerator </h3>
+<p>Not in the spec's interface definition (which shows <code>Promise&lt;CrawlResult[]&gt;</code> in examples), but aligned with the spec's intent to "stream results" and "yield pages." A genuinely better design choice that goes beyond the literal spec.</p>
+<h3 id="54-none-implement-robotstxt">5.4 None implement robots.txt </h3>
+<p>The spec's <code>CrawlOptions.respectRobots</code> appears as a declared field in Claude's interface but is not implemented. Codex and Gemini don't declare it at all. Not a failing — the spec lists it as an option, not a requirement.</p>
+<h3 id="55-shadcn-svelte-vs-bits-ui">5.5 shadcn-svelte vs. bits-ui </h3>
+<p>The spec calls for <code>shadcn-svelte</code> specifically. Both Claude and Gemini use <code>bits-ui</code> instead (which is the underlying headless component library that shadcn-svelte builds on). The end result is functionally equivalent, but <code>shadcn-svelte</code> would copy components into the project for full customization — <code>bits-ui</code> installs as a dependency.</p>
+<hr>
+<h2 id="6-performance--scalability-considerations">6. Performance &amp; Scalability Considerations </h2>
+<p>All three share the same fundamental scalability ceiling: O(n) brute-force cosine similarity search. This is appropriate for browser-based RAG with small corpora (a site with 50 pages at 512 tokens/chunk ≈ 200–500 chunks — completely tractable). None introduced unnecessary complexity for a problem that doesn't require it.</p>
+<p>The worker architecture (or lack thereof) matters more for perceived performance:</p>
+<ul>
+<li><strong>Claude</strong>: Heavy inference in dedicated workers → service worker stays responsive</li>
+<li><strong>Codex</strong>: Inline inference → service worker blocked during generation (bad for MV3 which has short lifecycles)</li>
+<li><strong>Gemini</strong>: New worker per query → model reloads on every question (significant latency overhead)</li>
+</ul>
+<hr>
+<h2 id="7-summary-assessment">7. Summary Assessment </h2>
+<h3 id="claude-code">Claude Code </h3>
+<p><strong>Strengths</strong>:</p>
+<p>Most complete implementation. Both modes work end-to-end. The AsyncGenerator crawler is the best design choice in the codebase. Worker architecture is correctly implemented. Svelte 5 Runes is modern. Options page is fully functional. Chat history preserves conversation context.</p>
+<p><strong>Weaknesses</strong>:</p>
+<p>Claude provider streaming is simulated. No fallback providers for development without GPU. Some declared features not implemented (maxDepth in crawler, respectRobots).</p>
+<h3 id="codex">Codex </h3>
+<p><strong>Strengths</strong>:</p>
+<p>Most defensive engineering — fallback providers ensure the extension always loads. Coverage reporting visible. The MVC controller pattern makes UI state testable without a browser. SiteRAGService is a clean orchestration separation. Scaffold test is a novel idea (verifies project structure in CI).</p>
+<p><strong>Weaknesses</strong>:</p>
+<p>Drops Svelte entirely (clear spec deviation). Workers not integrated with the actual message flow. Streaming is simulated. Provider initialization happens synchronously at module load (fragile in service workers with short lifecycles).</p>
+<h3 id="gemini">Gemini </h3>
+<p><strong>Strengths</strong>:</p>
+<p>Real SSE streaming for the Claude provider is the most correct implementation of that feature. <code>fake-indexeddb</code> enables proper database unit tests. Clean minimal code with good separation. Svelte 4 is stable and production-proven.</p>
+<p><strong>Weaknesses</strong>:</p>
+<p>Mode 2 (the main feature) is not connected to the user flow. Only the LLM worker is used; embedding and crawling block the service worker. Options page has non-functional UI elements (clear cache is an <code>alert()</code>, vector count is hardcoded to 0). Worker-per-query pattern reloads the model on every message.</p>
+<hr>
+<h2 id="8-verdict">8. Verdict </h2>
+<p>There is no single winner. The three agents excelled in different areas reflecting different interpretations of quality:</p>
+<ul>
+<li><strong>Codex</strong> invested in <strong>reliability and developer experience</strong> (fallbacks, coverage, controllers)</li>
+<li><strong>Claude</strong> invested in <strong>completeness and architecture</strong> (both modes, proper workers, AsyncGenerator)</li>
+<li><strong>Gemini</strong> invested in <strong>correctness of specific features</strong> (real streaming) while leaving other parts incomplete</li>
+</ul>
+<p>The spec was detailed enough to produce structurally similar outputs.</p>
+<p>The meaningful differences emerge where the spec was ambiguous or where agents had to make judgment calls under time/complexity constraints.</p>
+<p>Gemini's decision to skip Mode 2 integration suggests it deprioritized end-to-end integration in favor of implementing individual components cleanly.</p>
+<p>Codex's decision to skip Svelte suggests it optimized for simplicity of the build system.</p>
+<p>Claude's decision to implement AsyncGenerator crawling suggests it read the spec's intent rather than just its examples.</p>
+<h2 id="8-conclusion">8. Conclusion </h2>
+<p>Any of the three codebases could serve as a solid foundation.</p>
+<p>Combining <strong>Gemini's real SSE streaming</strong>, <strong>Codex's fallback providers</strong>, and <strong>Claude's worker architecture and AsyncGenerator crawler</strong> would produce the strongest result.</p>
+<hr>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

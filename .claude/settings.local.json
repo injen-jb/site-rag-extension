@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config user.name)",
+      "Bash(git config user.email)",
+      "Bash(git config --local user.name \"injen-jb\")",
+      "Bash(git config --local user.email \"think@injen.io\")",
+      "Bash(cmd /c \"dir /ah j:\\\\injen.io\\\\site_rag_extension\\\\\")",
+      "Bash(cmd /c \"git -C J:\\\\injen.io\\\\site_rag_extension config user.name\")",
+      "Bash(cmd /c \"for /r J:\\\\injen.io\\\\site_rag_extension %i in \\(.git\\) do @echo %i\")",
+      "Bash(attrib \"j:/injen.io/site_rag_extension/.git\")",
+      "Bash(git init)",
+      "Bash(git add .)",
+      "Bash(git rm -r --cached . -q)",
+      "Bash(git rm -r --cached . -qf)"
+    ]
+  }
+}

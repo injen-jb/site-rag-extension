@@ -1,0 +1,1 @@
+import "/assets/extension/src/background/background-PyEarQK3.js";
