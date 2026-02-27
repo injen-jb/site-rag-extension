@@ -6,8 +6,6 @@
 
 <center><img src="/medias/socrates_header.jpg"></center>
 
----
-
 ## Preamble — The Experiment
 
 This document records the **Socratic dialogue** between a human and Claude (conversational instance) that produced the `SPECIFICATIONS.md` specification file — a structured artifact subsequently handed off to autonomous coding agents (Claude Code, Gemini CLI, Codex CLI) **without any shared conversation history**.
@@ -17,8 +15,6 @@ The experiment tests a hypothesis:
 > *Can a conversational LLM, acting as a Socratic interlocutor, extract and crystallize a human's implicit intent into a specification precise enough for a separate coding agent to execute autonomously — in one pass — without the specification author present?*
 
 The `SPECIFICATIONS.md` file is the **interface between human intent and machine execution**. This document is the **record of how that interface was forged**.
-
----
 
 ## Methodology — Socratic Specification
 
@@ -33,11 +29,7 @@ The process follows a recognizable pattern:
 
 The key discipline: Claude never writes spec until the human's intent is genuinely understood. Questions precede answers. Research precedes recommendations.
 
----
-
 ## Turn-by-Turn Reconstruction
-
----
 
 ### Turn 1 — Foundation: What is a Chrome Extension?
 
@@ -48,8 +40,6 @@ The key discipline: Claude never writes spec until the human's intent is genuine
 **Key output:** Standard MV3 structure — `manifest.json`, background service worker, content scripts, popup. The three isolated contexts (Service Worker, Content Script, Popup) and their communication constraint (message passing, not shared memory) were established as the foundational mental model for everything that followed.
 
 **Why it mattered:** The isolation constraint directly shaped the entire worker architecture — LLM inference in a dedicated worker, crawler in another, communicating via typed messages. Getting this right early prevented architectural mistakes downstream.
-
----
 
 ### Turn 2 — Capabilities: Workers, WebGPU, WASM, NPM
 
@@ -67,8 +57,6 @@ The key discipline: Claude never writes spec until the human's intent is genuine
 | NPM libs? | ✅ but must bundle | Vite as bundler established |
 
 **Critical insight surfaced:** MV3's strict Content Security Policy blocks WASM eval by default — a non-obvious gotcha that would have caused silent failures. Catching it here vs. at 2am during an autonomous run is the difference between a successful experiment and a frustrating one.
-
----
 
 ### Turn 3 — Concept: The Two-Mode Architecture
 
@@ -96,8 +84,6 @@ sitemap.xml → BFS crawl (k pages, d depth) → HTML→Markdown → chunk → e
 
 **Socratic moment:** Claude did not ask "what tech stack?" — that would have been premature. Instead, the flows were established first, then technology choices followed from the flows. This ordering matters.
 
----
-
 ### Turn 4 — Research: Does This Already Exist?
 
 **Human intent:** Validate novelty before investing effort.
@@ -115,8 +101,6 @@ sitemap.xml → BFS crawl (k pages, d depth) → HTML→Markdown → chunk → e
 **The USP crystallized:** No existing solution is **fully self-contained** — they all require external infrastructure (cloud API, local server, external DB). The gap is a Chrome extension that works with zero setup beyond installation.
 
 **Spec impact:** "No external infrastructure" became a hard constraint, not a nice-to-have. This constraint directly drove the next turn's technological pivot.
-
----
 
 ### Turn 5 — Pivot: Liquid AI LFM2 + Full In-Browser Inference
 
@@ -144,8 +128,6 @@ sitemap.xml → BFS crawl (k pages, d depth) → HTML→Markdown → chunk → e
 
 **This was the pivotal turn.** The product went from "another RAG extension with a different LLM" to "the first genuinely self-contained browser-native RAG extension." The USP became real.
 
----
-
 ### Turn 6 — UI Stack Decision
 
 **Human intent:** "UI engine: pure JS, no framework (unless you know something basic and efficient). Design system: shadcn."
@@ -165,8 +147,6 @@ sitemap.xml → BFS crawl (k pages, d depth) → HTML→Markdown → chunk → e
 **Why Svelte fits:** Compiles to minimal vanilla JS at build time — zero runtime, no virtual DOM, smallest possible bundle. For a Chrome extension popup where every KB matters, this is the right tradeoff. Functionally equivalent to "plain JS with a component model."
 
 **Spec impact:** `.svelte` files, `@sveltejs/vite-plugin-svelte`, `shadcn-svelte` init command, specific component list (`Card`, `Input`, `Button`, `ScrollArea`, `Progress`, `Badge`, `Tabs`) all entered the spec.
-
----
 
 ### Turn 7 — Provider Abstraction & Code Quality
 
@@ -212,8 +192,6 @@ llm: new LFM2WebGPUProvider({ modelId: 'LiquidAI/LFM2-1.2B', dtype: 'q4' }),
 - Full JSDoc on all public APIs
 - No `new ConcreteClass()` inside business logic — receive via constructor
 
----
-
 ### Turn 8 — TDD Mandate
 
 **Human intent:** "We forgot something crucial! Tests! The whole generation process must be a loop in which tests are crucial!"
@@ -252,8 +230,6 @@ Red first. Always.
 
 **Coverage targets differentiated by layer:** 90% on `src/core/` (pure logic, no excuse), 70% on providers (browser env constraints), E2E covers Mode 1 + Mode 2 happy paths.
 
----
-
 ### Turn 9 — Execution Environment: CLI vs VS Code Extension
 
 **Human intent:** Practical question — which tool for the overnight autonomous run?
@@ -265,8 +241,6 @@ Red first. Always.
 **Recommendation:** CLI in iTerm/native terminal for the overnight pass. VS Code extension for interactive review in the morning.
 
 **Practical tip added:** Set an instruction in the prompt to run `pnpm test` after each step and stop if tests fail — preventing the agent from building on a broken foundation at 2am.
-
----
 
 ### Turn 10 — Token Budget & Reasoning Power
 

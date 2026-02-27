@@ -247,7 +247,7 @@ measures time-to-first-token < time-to-completion.
 
 There is no single winner and that is the correct outcome for this experiment.
 
-Each agent produced something valuable, each produced something incomplete. 
+Each agent produced something valuable and incomplete.
 
 **The report's own conclusion states it cleanly:**
 
