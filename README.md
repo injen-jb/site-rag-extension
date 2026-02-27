@@ -1,4 +1,4 @@
-<center><h1 style="font-size: 3em;">The Grand Battle Royale of Coding Agents</h1>
+<center><h1 style="font-size: 3em;">A Grand Battle Royale of Coding Agents</h1>
 
 <h3><i style="color: white !important" >Claude Code vs. Codex CLI vs. Gemini CLI<br><br>A Controlled Experiment in Agentic Specification-Driven Development.</i></h3></center>
 
@@ -132,7 +132,7 @@ The first and most striking finding: **structural convergence was near-total**.
 
 All three independently produced the same folder layout, the same TypeScript strict config, the same AI stack (`@huggingface/transformers`, `Xenova/all-MiniLM-L6-v2`, `LiquidAI/LFM2-1.2B`), the same provider contract test pattern, the same cosine similarity approach for vector search.
 
-The spec imposed a strong enough template that three different systems, with different architectures and training data, arrived at essentially the same skeleton. 
+The spec imposed a strong enough template that three different systems, with different architectures and training data, arrived at essentially the same skeleton.
 
 **The specification worked.**
 

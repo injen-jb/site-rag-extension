@@ -360,7 +360,7 @@ Phase 8: COMPILE
 ## Appendix — Files Produced
 
 | File | Purpose | Consumer |
-|---|---|---|
+| --- | --- | --- |
 | `SPECIFICATIONS.md` | Compiled spec — decisions, architecture, standards, build order | Coding agents (Claude Code, Gemini CLI, Codex CLI) |
 | `SOCRATIC_SPECIFICATION_PROCESS.md` | This file — the reasoning behind each decision | Humans reviewing, extending, or replicating the process |
 
