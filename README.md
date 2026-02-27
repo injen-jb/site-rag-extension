@@ -12,9 +12,7 @@
 
 What happens when you give three competing AI coding agents the **exact same specification** produced through a rigorous Socratic dialogue process, and let them loose to build autonomously, overnight, from a cold start?
 
-Not a toy task,, not a "write a sorting algorithm."
-
-**A real, non-trivial product:**
+**And we're talking about a real, non-trivial product:**
 
 > A Chrome Extension (Manifest V3) that lets users **chat with any website** using **100% in-browser AI inference**, WebGPU, no API keys, no servers, offline after first model load.
 
